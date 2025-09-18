@@ -1,8 +1,8 @@
 import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 import { Award, Clock, Users, Target, Calendar, Check } from 'lucide-react';
+import Link from 'next/link';
 
 const About = () => {
   const team = [
@@ -40,7 +40,7 @@ const About = () => {
   ];
 
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4">
@@ -422,7 +422,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 

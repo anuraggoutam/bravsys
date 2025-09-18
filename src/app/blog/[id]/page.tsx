@@ -1,6 +1,4 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -12,6 +10,8 @@ import {
   BookOpen,
 } from 'lucide-react';
 import { useBlog } from '@/hooks/useBlog';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
 
 const BlogPost = () => {
   const { id } = useParams();
@@ -21,7 +21,7 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <Layout>
+      <>
         <div className="container mx-auto px-4 py-20 text-center">
           <h1 className="text-4xl font-bold mb-4">Blog Post Not Found</h1>
           <p className="text-gray-600 mb-8">
@@ -31,12 +31,12 @@ const BlogPost = () => {
             <Link href="/blog">Back to Blog</Link>
           </Button>
         </div>
-      </Layout>
+      </>
     );
   }
 
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <section className="py-12 bg-linear-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
@@ -216,7 +216,7 @@ const BlogPost = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 

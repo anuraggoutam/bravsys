@@ -1,4 +1,4 @@
-
+"use client"
 import React from 'react';
 import { Cpu, Database, Globe, Users, Code, ArrowRight, Monitor, Smartphone } from 'lucide-react';
 import { Button } from '@/components/ui/button';

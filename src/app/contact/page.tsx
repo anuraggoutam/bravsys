@@ -1,15 +1,15 @@
+"use client"
 import React from 'react';
-import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
-import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
 const Contact = () => {
-  const { toast } = useToast();
+  
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -26,7 +26,7 @@ const Contact = () => {
   };
 
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4">
@@ -310,7 +310,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 

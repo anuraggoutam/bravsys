@@ -1,16 +1,6 @@
-import React, { useState } from 'react';
-import Layout from '@/components/layout/Layout';
+'use client';
+import React from 'react';
 import { Button } from '@/components/ui/button';
-import {
-  ArrowRight,
-  Users,
-  Star,
-  Trophy,
-  Gamepad2,
-  Zap,
-  Shield,
-  BarChart3,
-} from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Portfolio = () => {
@@ -21,7 +11,7 @@ const Portfolio = () => {
   const { ref: ctaRef, isVisible: ctaVisible } = useScrollAnimation();
 
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -468,7 +458,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 

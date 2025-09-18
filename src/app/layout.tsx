@@ -4,7 +4,7 @@ import "./globals.css";
 import "./App.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-
+import { Toaster } from '@/components/ui/sonner';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +34,7 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="grow">{children}</main>
+          <Toaster/>
           <Footer />
         </div>
       </body>

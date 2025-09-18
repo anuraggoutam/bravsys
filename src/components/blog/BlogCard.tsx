@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Calendar, User, Clock, Eye, Heart, Bookmark } from 'lucide-react';
 import { BlogPost } from '@/types/blog';
+import Link from 'next/link';
 
 interface BlogCardProps {
   post: BlogPost;

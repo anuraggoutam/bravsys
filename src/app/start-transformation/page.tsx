@@ -1,9 +1,7 @@
 import React from 'react';
-import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import {
   ArrowRight,
-  CheckCircle,
   Users,
   Target,
   Zap,
@@ -66,7 +64,7 @@ const StartTransformation = () => {
   ];
 
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <section className="relative min-h-[80vh] py-20 bg-linear-to-br from-gray-50 via-white to-blue-50 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -234,7 +232,7 @@ const StartTransformation = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 

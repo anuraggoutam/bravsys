@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Play, Users, Award, Globe, ArrowRight } from 'lucide-react';
 
@@ -45,7 +44,7 @@ const WatchOurStory = () => {
   ];
 
   return (
-    <Layout>
+    <>
       {/* Hero Section with Video */}
       <section className="relative min-h-screen py-20 bg-linear-to-br from-gray-900 via-blue-900 to-purple-900 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -268,7 +267,7 @@ const WatchOurStory = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 

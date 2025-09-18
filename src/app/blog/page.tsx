@@ -1,5 +1,5 @@
+"use client"
 import React, { useState, useEffect } from 'react';
-import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -10,11 +10,8 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination';
-import { Link } from 'react-router-dom';
 import {
   Search,
-  Filter,
-  Sparkles,
   TrendingUp,
   ArrowRight,
   BookOpen,
@@ -26,6 +23,7 @@ import BlogFilters from '@/components/blog/BlogFilters';
 import BlogSidebar from '@/components/blog/BlogSidebar';
 import { useBlog } from '@/hooks/useBlog';
 import { blogPosts } from '@/data/blogData';
+import Link from 'next/link';
 
 const Blog = () => {
   const { filterState, paginatedPosts, totalPages, updateFilter } = useBlog(6);
@@ -44,7 +42,7 @@ const Blog = () => {
   }, []);
 
   return (
-    <Layout>
+    <>
       {/* Elegant Hero Section */}
       <section className="relative py-24 md:py-32 overflow-hidden bg-linear-to-br from-gray-50 via-white to-blue-50">
         {/* Subtle Background Elements */}
@@ -406,7 +404,7 @@ const Blog = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 
