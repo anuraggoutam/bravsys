@@ -2,9 +2,9 @@ import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Clock, User, TrendingUp } from 'lucide-react';
 import { blogPosts } from '@/data/blogData';
+import Link from 'next/link';
 
 const Blog = () => {
   const featuredPost = blogPosts.find(post => post.featured);
@@ -53,7 +53,7 @@ const Blog = () => {
                   </div>
                   
                   <Link 
-                    to={`/blog/${featuredPost.id}`}
+                    href={`/blog/${featuredPost.id}`}
                     className="text-2xl lg:text-3xl font-bold text-gray-900 hover:text-blue-600 transition-colors mb-4 leading-tight"
                   >
                     {featuredPost.title}
@@ -118,7 +118,7 @@ const Blog = () => {
                 </div>
                 
                 <Link 
-                  to={`/blog/${post.id}`}
+                  href={`/blog/${post.id}`}
                   className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors leading-tight group-hover:text-blue-600"
                 >
                   {post.title}
@@ -153,7 +153,7 @@ const Blog = () => {
                 </div>
                 
                 <Link 
-                  to={`/blog/${post.id}`} 
+                  href={`/blog/${post.id}`} 
                   className="text-blue-600 font-medium inline-flex items-center hover:text-blue-700 transition-colors group/link"
                 >
                   Read More 
@@ -185,7 +185,7 @@ const Blog = () => {
         {/* Call to Action */}
         <div className="text-center">
           <Button asChild size="lg" className="gradient-bg hover:opacity-90 transition-opacity px-8 py-4 text-lg">
-            <Link to="/blog">
+            <Link href="/blog">
               Explore All Articles
               <ArrowRight size={20} className="ml-2" />
             </Link>

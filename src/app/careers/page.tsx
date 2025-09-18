@@ -523,7 +523,7 @@ const Careers = () => {
                 asChild
                 className="bg-white text-gray-900 hover:bg-blue-50 px-8 py-4 text-lg shadow-elegant hover:shadow-glow transition-all duration-300 transform hover:scale-105"
               >
-                <Link to="/contact">
+                <Link href="/contact">
                   Get in Touch
                   <ArrowRight size={20} className="ml-2" />
                 </Link>
@@ -533,7 +533,7 @@ const Careers = () => {
                 variant="outline"
                 className="border-blue-300 text-blue-300 hover:bg-blue-900/50 px-8 py-4 text-lg transition-all duration-300 hover:shadow-lg"
               >
-                <Link to="/about-us">Learn About Us</Link>
+                <Link href="/about-us">Learn About Us</Link>
               </Button>
             </div>
           </div>

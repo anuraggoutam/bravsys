@@ -1,10 +1,10 @@
-
+"use client"
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import HeroStats from './sections/HeroStats';
 import { heroStats } from '@/constants/homeData';
+import Link from 'next/link';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,13 +43,13 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 items-start mb-8 md:mb-12">
-              <Link to="/start-transformation">
+              <Link href="/start-transformation">
                 <Button className="bg-gray-900 hover:bg-gray-800 text-white text-base md:text-lg px-6 md:px-8 py-4 md:py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
                   Start Your Transformation
                   <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
                 </Button>
               </Link>
-              <Link to="/watch-our-story">
+              <Link href="/watch-our-story">
                 <Button variant="outline" className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 rounded-xl border-2 border-gray-200 hover:bg-gray-50 group transition-all duration-300 w-full sm:w-auto">
                   <Play className="mr-2 w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform" />
                   Watch Our Story

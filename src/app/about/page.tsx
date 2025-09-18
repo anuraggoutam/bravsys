@@ -412,10 +412,10 @@ const About = () => {
                   asChild
                   className="gradient-bg hover:opacity-90 transition-opacity"
                 >
-                  <Link to="/contact">Get in Touch</Link>
+                  <Link href="/contact">Get in Touch</Link>
                 </Button>
                 <Button asChild variant="outline">
-                  <Link to="/services">Explore Our Services</Link>
+                  <Link href="/services">Explore Our Services</Link>
                 </Button>
               </div>
             </div>

@@ -189,7 +189,7 @@ const Blog = () => {
                     </div>
 
                     <Link
-                      to={`/blog/${featuredPost.id}`}
+                      href={`/blog/${featuredPost.id}`}
                       className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       Read Full Article
@@ -390,7 +390,7 @@ const Blog = () => {
                 asChild
                 className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                <Link to="/contact">
+                <Link href="/contact">
                   Start Your Project
                   <ArrowRight size={20} className="ml-2" />
                 </Link>
@@ -400,7 +400,7 @@ const Blog = () => {
                 variant="outline"
                 className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg transition-all duration-300"
               >
-                <Link to="/services">Explore Our Services</Link>
+                <Link href="/services">Explore Our Services</Link>
               </Button>
             </div>
           </div>

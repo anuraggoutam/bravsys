@@ -141,7 +141,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({ activeCategory, onCategoryCha
                 </div>
                 <div className="flex-1 min-w-0">
                   <Link 
-                    to={`/blog/${post.id}`}
+                    href={`/blog/${post.id}`}
                     className="font-medium text-gray-900 hover:text-blue-600 transition-colors text-sm line-clamp-2 mb-2 block"
                   >
                     {post.title}
@@ -162,7 +162,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({ activeCategory, onCategoryCha
           ))}
         </div>
         <Link 
-          to="/blog"
+          href="/blog"
           className="mt-4 block text-center text-blue-600 font-medium hover:text-blue-700 transition-colors"
         >
           View All Posts →

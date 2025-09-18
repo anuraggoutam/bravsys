@@ -28,7 +28,7 @@ const BlogPost = () => {
             The blog post you're looking for doesn't exist.
           </p>
           <Button asChild>
-            <Link to="/blog">Back to Blog</Link>
+            <Link href="/blog">Back to Blog</Link>
           </Button>
         </div>
       </Layout>
@@ -42,7 +42,7 @@ const BlogPost = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <Button variant="outline" asChild className="mb-6">
-              <Link to="/blog">
+              <Link href="/blog">
                 <ArrowLeft size={16} className="mr-2" />
                 Back to Blog
               </Link>
@@ -157,7 +157,7 @@ const BlogPost = () => {
                       {relatedPosts.map((relatedPost) => (
                         <Link
                           key={relatedPost.id}
-                          to={`/blog/${relatedPost.id}`}
+                          href={`/blog/${relatedPost.id}`}
                           className="block group"
                         >
                           <div className="flex gap-3">
@@ -203,14 +203,14 @@ const BlogPost = () => {
                 asChild
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
-                <Link to="/contact">Get Started</Link>
+                <Link href="/contact">Get Started</Link>
               </Button>
               <Button
                 asChild
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-blue-600"
               >
-                <Link to="/blog">More Articles</Link>
+                <Link href="/blog">More Articles</Link>
               </Button>
             </div>
           </div>

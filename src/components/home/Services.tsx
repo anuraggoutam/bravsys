@@ -1,11 +1,12 @@
 
+'use client';
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { useScrollAnimation, useStaggeredAnimation } from '@/hooks/useScrollAnimation';
 import ServiceCard from './sections/ServiceCard';
 import { services } from '@/constants/homeData';
+import Link from 'next/link';
 
 const Services = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
@@ -52,7 +53,7 @@ const Services = () => {
 
         <div className="text-center mt-20">
           <Button asChild className="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-6 text-lg rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1">
-            <Link to="/services">
+            <Link href="/services">
               Explore All Services
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>

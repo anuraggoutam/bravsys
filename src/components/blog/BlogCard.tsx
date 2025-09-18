@@ -101,7 +101,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, index = 0 }) => {
           </div>
           
           <Link 
-            to={`/blog/${post.id}`}
+            href={`/blog/${post.id}`}
             className="text-xl font-bold text-gray-900 hover:bg-clip-text hover:text-transparent hover:bg-linear-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300 leading-tight line-clamp-2"
           >
             {post.title}
@@ -143,7 +143,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, index = 0 }) => {
           </div>
           
           <Link 
-            to={`/blog/${post.id}`} 
+            href={`/blog/${post.id}`} 
             className="inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-blue-500 to-purple-600 text-white text-sm font-medium rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 group/btn"
           >
             Read More 

@@ -1,7 +1,8 @@
+'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import Link from 'next/link';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,9 +14,9 @@ const Header = () => {
   const navItems = [
     { name: 'Services', path: '/services' },
     { name: 'Products', path: '/portfolio', hasDropdown: true },
-    
+
     { name: 'Industries', path: '/industries' },
-    { name: 'About Us', path: '/about-us' }
+    { name: 'About Us', path: '/about-us' },
   ];
 
   return (
@@ -24,14 +25,14 @@ const Header = () => {
         {/* Top bar */}
         <div className="flex justify-end items-center py-2 text-sm text-gray-600 border-b border-gray-100">
           <div className="flex space-x-6">
-            <Link to="/blog" className="hover:text-gray-900 transition-colors">
+            <Link href="/blog" className="hover:text-gray-900 transition-colors">
               Articles
             </Link>
-            <Link to="/blog" className="hover:text-gray-900 transition-colors">
+            <Link href="/blog" className="hover:text-gray-900 transition-colors">
               News
             </Link>
             <Link
-              to="/careers"
+              href="/careers"
               className="hover:text-gray-900 transition-colors"
             >
               Careers
@@ -41,7 +42,7 @@ const Header = () => {
 
         {/* Main navigation */}
         <div className="py-4 flex justify-between items-center">
-          <Link to="/" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <img
               src="/assets/bravsys-logo.png"
               alt="BRAVSYS Logo"
@@ -54,7 +55,7 @@ const Header = () => {
             {navItems.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
-                  to={item.path}
+                  href={item.path}
                   className="text-gray-600 hover:text-gray-900 transition-colors duration-200 flex items-center"
                 >
                   {item.name}
@@ -64,7 +65,7 @@ const Header = () => {
                 </Link>
               </div>
             ))}
-            <Link to="/contact">
+            <Link href="/contact">
               <Button className="gradient-bg hover:opacity-90 text-primary-foreground px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                 🚀 Free Consultation
               </Button>
@@ -89,14 +90,14 @@ const Header = () => {
             {navItems.map((item) => (
               <Link
                 key={item.name}
-                to={item.path}
+                href={item.path}
                 className="text-gray-700 py-2 hover:text-gray-900 transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
               <Button className="gradient-bg hover:opacity-90 text-primary-foreground w-full py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
                 🚀 Free Consultation
               </Button>

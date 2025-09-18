@@ -1,9 +1,7 @@
 import React from 'react';
-import Layout from '@/components/layout/Layout';
 import Hero from '@/components/home/Hero';
 import Services from '@/components/home/Services';
 import Highlights from '@/components/home/Highlights';
-
 import About from '@/components/home/About';
 import Portfolio from '@/components/home/Portfolio';
 import Testimonials from '@/components/home/Testimonials';
@@ -13,7 +11,7 @@ import Cta from '@/components/home/Cta';
 
 const Index = () => {
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <Hero />
 
@@ -40,8 +38,11 @@ const Index = () => {
 
       {/* Call to Action */}
       <Cta />
-    </Layout>
+    </>
   );
 };
 
 export default Index;
+
+
+
