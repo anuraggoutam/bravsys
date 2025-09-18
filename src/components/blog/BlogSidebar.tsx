@@ -1,12 +1,12 @@
 
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+"use client"
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Tag, Calendar, TrendingUp, Users, Star, ChevronRight, BookOpen, MessageCircle } from 'lucide-react';
-import { BlogPost } from '@/types/blog';
 import { categories, blogPosts } from '@/data/blogData';
+import Link from 'next/link';
 
 interface BlogSidebarProps {
   activeCategory: string;
