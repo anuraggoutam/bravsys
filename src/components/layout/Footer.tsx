@@ -1,9 +1,17 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+} from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -13,27 +21,41 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <Link href="/" className="flex items-center mb-4">
-              <img 
-                src="/assets/bravsys-logo.png" 
-                alt="BRAVSYS Logo" 
+              <Image
+                src="/assets/bravsys-logo.png"
+                alt="BRAVSYS Logo"
+                width={120}
+                height={32}
                 className="h-8"
               />
             </Link>
             <p className="text-gray-400 mb-4">
-              Crafting digital experiences that convert visitors into customers through
-              stunning design and powerful functionality.
+              Crafting digital experiences that convert visitors into customers
+              through stunning design and powerful functionality.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 <Linkedin size={20} />
               </a>
             </div>
@@ -44,32 +66,50 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/about"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/services"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/portfolio" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/portfolio"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/blog"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/contact"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Contact
                 </Link>
               </li>
@@ -91,7 +131,8 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 text-gray-400" />
                 <span className="text-gray-400">
-                  D-129B Street 14, West Vinod Nagar, Block D, Delhi 110092 India
+                  D-129B Street 14, West Vinod Nagar, Block D, Delhi 110092
+                  India
                 </span>
               </li>
             </ul>
@@ -122,10 +163,16 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} BRAVSYS. All rights reserved.
           </p>
           <div className="flex justify-center md:justify-end space-x-4">
-            <a href="#" className="text-gray-500 hover:text-white transition-colors">
+            <a
+              href="#"
+              className="text-gray-500 hover:text-white transition-colors"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="text-gray-500 hover:text-white transition-colors">
+            <a
+              href="#"
+              className="text-gray-500 hover:text-white transition-colors"
+            >
               Terms of Service
             </a>
           </div>

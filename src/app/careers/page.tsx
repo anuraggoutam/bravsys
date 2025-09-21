@@ -1,5 +1,5 @@
+"use client"
 import React, { useState, useEffect } from 'react';
-import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -9,7 +9,6 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
 import {
   Users,
   Heart,
@@ -28,6 +27,7 @@ import {
   Shield,
   Plane,
 } from 'lucide-react';
+import Link from 'next/link';
 
 const jobOpenings = [
   {
@@ -217,7 +217,7 @@ const Careers = () => {
   }, []);
 
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 overflow-hidden bg-linear-to-br from-gray-50 via-white to-blue-50">
         <div className="absolute inset-0">
@@ -539,7 +539,7 @@ const Careers = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 

@@ -12,6 +12,7 @@ import {
 import { useBlog } from '@/hooks/useBlog';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import Image from 'next/image';
 
 const BlogPost = () => {
   const { id } = useParams();
@@ -78,11 +79,15 @@ const BlogPost = () => {
       <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-64 md:h-96 object-cover rounded-lg shadow-lg"
-            />
+            <div className="relative w-full h-64 md:h-96">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                className="object-cover rounded-lg shadow-lg"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -114,9 +119,11 @@ const BlogPost = () => {
                 {/* Author Bio */}
                 <div className="mt-8 p-6 bg-gray-50 rounded-lg">
                   <div className="flex items-start gap-4">
-                    <img
+                    <Image
                       src={post.author.avatar}
                       alt={post.author.name}
+                      width={64}
+                      height={64}
                       className="w-16 h-16 rounded-full"
                     />
                     <div>
@@ -161,12 +168,16 @@ const BlogPost = () => {
                           className="block group"
                         >
                           <div className="flex gap-3">
-                            <img
-                              src={relatedPost.image}
-                              alt={relatedPost.title}
-                              className="w-12 h-12 object-cover rounded"
-                            />
-                            <div>
+                            <div className="relative w-12 h-12 flex-shrink-0">
+                              <Image
+                                src={relatedPost.image}
+                                alt={relatedPost.title}
+                                fill
+                                className="object-cover rounded"
+                                sizes="48px"
+                              />
+                            </div>
+                            <div className="flex-1 min-w-0">
                               <h4 className="text-sm font-medium group-hover:text-blue-600 transition-colors line-clamp-2">
                                 {relatedPost.title}
                               </h4>

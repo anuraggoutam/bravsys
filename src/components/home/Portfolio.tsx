@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Project {
   id: number;
@@ -135,11 +136,13 @@ const Portfolio = () => {
               key={project.id}
               className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow"
             >
-              <div className="relative overflow-hidden">
-                <img
+              <div className="relative overflow-hidden h-64">
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
                   <div className="p-6 text-white">

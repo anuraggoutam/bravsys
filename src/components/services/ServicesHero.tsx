@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
 import Image from 'next/image';
-
 
 const ServicesHero = () => {
   return (
@@ -77,14 +75,15 @@ const ServicesHero = () => {
           {/* Hero Image */}
           <div className="relative">
             <div className="absolute -inset-4 bg-linear-to-r from-primary/20 to-purple-500/20 rounded-3xl blur-2xl"></div>
-            <Image
-              src="/assets/GeminiS.png"
-              alt="Advanced technology solutions and digital transformation"
-              className="relative rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-500"
-              width={200}
-              height={100}
-            />
-            
+            <div className="relative w-full h-96 lg:h-[500px]">
+              <Image
+                src="/assets/GeminiS.png"
+                alt="Advanced technology solutions and digital transformation"
+                fill
+                className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500 object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
           </div>
         </div>
       </div>

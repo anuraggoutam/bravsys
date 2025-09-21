@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,6 @@ const Header = () => {
   const navItems = [
     { name: 'Services', path: '/services' },
     // { name: 'Products', path: '/portfolio', hasDropdown: true },
-
     { name: 'Industries', path: '/industries' },
     { name: 'About Us', path: '/about-us' },
   ];
@@ -25,7 +25,10 @@ const Header = () => {
         {/* Top bar */}
         <div className="flex justify-end items-center py-2 text-sm text-gray-600 border-b border-gray-100">
           <div className="flex space-x-6">
-            <Link href="/blog" className="hover:text-gray-900 transition-colors">
+            <Link
+              href="/blog"
+              className="hover:text-gray-900 transition-colors"
+            >
               Articles
             </Link>
             <Link
@@ -40,9 +43,11 @@ const Header = () => {
         {/* Main navigation */}
         <div className="py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            <img
+            <Image
               src="/assets/bravsys-logo.png"
               alt="BRAVSYS Logo"
+              width={120}
+              height={32}
               className="h-8 md:h-10"
             />
           </Link>

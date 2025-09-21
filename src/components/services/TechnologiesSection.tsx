@@ -1,4 +1,3 @@
-
 'use client';
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -7,6 +6,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Image from 'next/image';
 
 const technologies = [
   {
@@ -60,8 +60,8 @@ const TechnologiesSection = () => {
             Technologies We Master
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We leverage the latest technologies to build scalable, future-ready solutions that 
-            keep your business ahead of the competition.
+            We leverage the latest technologies to build scalable, future-ready
+            solutions that keep your business ahead of the competition.
           </p>
         </div>
 
@@ -86,14 +86,16 @@ const TechnologiesSection = () => {
           className="technologies-swiper"
         >
           {technologies.map((tech, index) => (
-            <SwiperSlide key={index} className='pb-10'>
+            <SwiperSlide key={index} className="pb-10">
               <div className="group bg-card/60 backdrop-blur-xs rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-border/50 hover:border-primary/20 transition-all duration-500 h-full transform hover:-translate-y-2">
                 <div className="relative h-48 overflow-hidden">
                   <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent z-10"></div>
-                  <img 
-                    src={tech.image} 
+                  <Image
+                    src={tech.image}
                     alt={tech.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-6 space-y-4">
@@ -109,7 +111,6 @@ const TechnologiesSection = () => {
                   </div> */}
                 </div>
               </div>
-              
             </SwiperSlide>
           ))}
         </Swiper>

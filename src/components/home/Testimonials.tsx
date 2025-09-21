@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import Image from 'next/image';
 
 interface Testimonial {
   id: number;
@@ -76,11 +77,13 @@ const Testimonials = () => {
                   <div className="flex flex-col md:flex-row gap-8 items-center">
                     <div className="md:w-1/3 flex justify-center">
                       <div className="relative">
-                        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                          <img
+                        <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                          <Image
                             src={testimonials[activeIndex].image}
                             alt={testimonials[activeIndex].name}
-                            className="w-full h-full object-cover"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 96px, 128px"
                           />
                         </div>
                         <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white">

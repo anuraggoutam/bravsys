@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -24,6 +24,7 @@ import BlogSidebar from '@/components/blog/BlogSidebar';
 import { useBlog } from '@/hooks/useBlog';
 import { blogPosts } from '@/data/blogData';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Blog = () => {
   const { filterState, paginatedPosts, totalPages, updateFilter } = useBlog(6);
@@ -143,11 +144,15 @@ const Blog = () => {
               <div className="bg-white/80 backdrop-blur-xs rounded-2xl p-8 border border-gray-200/50 shadow-2xl">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                   <div className="relative">
-                    <img
-                      src={featuredPost.image}
-                      alt={featuredPost.title}
-                      className="w-full h-80 object-cover rounded-xl shadow-2xl"
-                    />
+                    <div className="relative w-full h-80">
+                      <Image
+                        src={featuredPost.image}
+                        alt={featuredPost.title}
+                        fill
+                        className="object-cover rounded-xl shadow-2xl"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                    </div>
                     <div className="absolute top-4 left-4">
                       <Badge className="bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg font-medium">
                         Featured
@@ -171,9 +176,11 @@ const Blog = () => {
 
                     <div className="flex items-center gap-6 mb-6 text-sm">
                       <div className="flex items-center gap-2">
-                        <img
+                        <Image
                           src={featuredPost.author.avatar}
                           alt={featuredPost.author.name}
+                          width={40}
+                          height={40}
                           className="w-10 h-10 rounded-full ring-2 ring-blue-200"
                         />
                         <span className="text-gray-700">

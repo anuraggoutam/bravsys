@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import Image from 'next/image';
 
 const Portfolio = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
@@ -46,11 +47,15 @@ const Portfolio = () => {
               }`}
             >
               <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&q=80&w=800"
-                  alt="Casino Experience"
-                  className="w-full h-96 object-cover rounded-2xl shadow-2xl"
-                />
+                <div className="relative w-full h-96">
+                  <Image
+                    src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&q=80&w=800"
+                    alt="Casino Experience"
+                    fill
+                    className="object-cover rounded-2xl shadow-2xl"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
                 <div className="absolute inset-0 bg-linear-to-tr from-blue-600/20 to-purple-600/20 rounded-2xl"></div>
               </div>
             </div>
@@ -72,10 +77,12 @@ const Portfolio = () => {
             {/* Diamond Casino Card */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
               <div className="relative h-64">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800"
                   alt="Diamond Casino"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent"></div>
               </div>
@@ -104,10 +111,12 @@ const Portfolio = () => {
             {/* Casino360.ai Card */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
               <div className="relative h-64">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&q=80&w=800"
                   alt="Casino360.ai"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent"></div>
               </div>
@@ -184,11 +193,15 @@ const Portfolio = () => {
               }`}
             >
               <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&q=80&w=800"
-                  alt="Casino Gaming"
-                  className="w-full h-96 object-cover rounded-2xl shadow-2xl"
-                />
+                <div className="relative w-full h-96">
+                  <Image
+                    src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&q=80&w=800"
+                    alt="Casino Gaming"
+                    fill
+                    className="object-cover rounded-2xl shadow-2xl"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
                 <div className="absolute inset-0 bg-linear-to-tr from-blue-600/20 to-purple-600/20 rounded-2xl"></div>
               </div>
             </div>
@@ -226,10 +239,12 @@ const Portfolio = () => {
             {/* Solutions We Offer */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <div className="relative h-64">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
                   alt="Solutions"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent"></div>
               </div>
@@ -249,10 +264,12 @@ const Portfolio = () => {
             {/* Gaming Technology */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <div className="relative h-64">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800"
                   alt="Gaming Technology"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent"></div>
               </div>
@@ -351,11 +368,15 @@ const Portfolio = () => {
 
             {/* Right Image */}
             <div className="lg:sticky lg:top-8">
-              <img
-                src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800"
-                alt="Casino CRM Dashboard"
-                className="w-full h-96 object-cover rounded-2xl shadow-2xl"
-              />
+              <div className="relative w-full h-96">
+                <Image
+                  src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800"
+                  alt="Casino CRM Dashboard"
+                  fill
+                  className="object-cover rounded-2xl shadow-2xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -382,11 +403,15 @@ const Portfolio = () => {
 
             {/* Right Image */}
             <div>
-              <img
-                src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800"
-                alt="Casino Gaming Machines"
-                className="w-full h-64 object-cover rounded-2xl"
-              />
+              <div className="relative w-full h-64">
+                <Image
+                  src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=800"
+                  alt="Casino Gaming Machines"
+                  fill
+                  className="object-cover rounded-2xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
             </div>
           </div>
         </div>

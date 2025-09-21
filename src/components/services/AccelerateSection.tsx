@@ -1,8 +1,9 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+
 const AccelerateSection = () => {
   return (
     <section className="py-24 bg-linear-to-br from-background to-muted/30">
@@ -55,11 +56,15 @@ const AccelerateSection = () => {
           <div className="relative z-10">
             <div className="relative">
               <div className="absolute -inset-4 bg-white/20 rounded-2xl blur-xl"></div>
-              <img
-                src="/assets/Growth.jpeg"
-                alt="Digital transformation and business growth"
-                className="relative rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-500"
-              />
+              <div className="relative w-full h-80 lg:h-96">
+                <Image
+                  src="/assets/Growth.jpeg"
+                  alt="Digital transformation and business growth"
+                  fill
+                  className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500 object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
             </div>
           </div>
         </div>

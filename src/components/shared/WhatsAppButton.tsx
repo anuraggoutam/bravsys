@@ -12,7 +12,7 @@ const WhatsAppButton = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+1234567890"; // Replace with your actual WhatsApp number
+    const phoneNumber = "+919310430779"; // Replace with your actual WhatsApp number
     const message = "Hi! I'm interested in your services. Can we discuss my project?";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -20,7 +20,7 @@ const WhatsAppButton = () => {
 
   return (
     <div
-      className={`fixed bottom-6 right-6 z-50 transition-all duration-500 ${
+      className={`fixed bottom-10 right-10 z-50 transition-all duration-500 ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'
       }`}
     >

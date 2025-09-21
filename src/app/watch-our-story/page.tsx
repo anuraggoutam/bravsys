@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Play, Users, Award, Globe, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 const WatchOurStory = () => {
   const milestones = [
@@ -90,10 +91,12 @@ const WatchOurStory = () => {
             {/* Video Placeholder */}
             <div className="relative">
               <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl aspect-video">
-                <img
+                <Image
                   src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800"
                   alt="Company story video thumbnail"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                   <Button className="bg-white/20 hover:bg-white/30 backdrop-blur-xs text-white border-2 border-white/30 w-20 h-20 rounded-full p-0">
@@ -215,28 +218,44 @@ const WatchOurStory = () => {
 
             <div className="grid grid-cols-2 gap-6">
               <div className="space-y-6">
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300"
-                  alt="Team member"
-                  className="w-full h-48 object-cover rounded-2xl shadow-lg"
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&q=80&w=300"
-                  alt="Team member"
-                  className="w-full h-32 object-cover rounded-2xl shadow-lg"
-                />
+                <div className="relative w-full h-48">
+                  <Image
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300"
+                    alt="Team member"
+                    fill
+                    className="object-cover rounded-2xl shadow-lg"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="relative w-full h-32">
+                  <Image
+                    src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&q=80&w=300"
+                    alt="Team member"
+                    fill
+                    className="object-cover rounded-2xl shadow-lg"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
               </div>
               <div className="space-y-6 mt-8">
-                <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=300"
-                  alt="Team member"
-                  className="w-full h-32 object-cover rounded-2xl shadow-lg"
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=300"
-                  alt="Team member"
-                  className="w-full h-48 object-cover rounded-2xl shadow-lg"
-                />
+                <div className="relative w-full h-32">
+                  <Image
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=300"
+                    alt="Team member"
+                    fill
+                    className="object-cover rounded-2xl shadow-lg"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="relative w-full h-48">
+                  <Image
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=300"
+                    alt="Team member"
+                    fill
+                    className="object-cover rounded-2xl shadow-lg"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
               </div>
             </div>
           </div>
