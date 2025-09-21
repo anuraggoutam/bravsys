@@ -20,7 +20,7 @@ const IndustriesGrid = () => {
     {
       title: 'Financial Services',
       description:
-        "As a trusted provider for the financial services industry, Droisys brings deep expertise in high-level security and privacy compliance. In today's demanding and risk-sensitive market, customers expect personalized service and secure practices. We help financial service customers navigate this changing landscape with innovative solutions, giving them a distinct competitive advantage.",
+        "As a trusted provider for the financial services industry, Bravsys brings deep expertise in high-level security and privacy compliance. In today's demanding and risk-sensitive market, customers expect personalized service and secure practices. We help financial service customers navigate this changing landscape with innovative solutions, giving them a distinct competitive advantage.",
       image:
         'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=500',
     },

@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
   {
     id: 1,
     quote:
-      'Droisys transformed our digital infrastructure with their AI-powered solutions. The results exceeded our expectations, delivering 40% improvement in operational efficiency.',
+      'Bravsys transformed our digital infrastructure with their AI-powered solutions. The results exceeded our expectations, delivering 40% improvement in operational efficiency.',
     name: 'Sarah Johnson',
     title: 'CTO',
     company: 'TechCorp Industries',
@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
   {
     id: 3,
     quote:
-      'The web applications developed by Droisys have revolutionized our business operations. We now have faster, more efficient digital processes.',
+      'The web applications developed by Bravsys have revolutionized our business operations. We now have faster, more efficient digital processes.',
     name: 'Amanda Rodriguez',
     title: 'Head of Analytics',
     company: 'Innovation Labs',

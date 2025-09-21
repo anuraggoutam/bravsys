@@ -26,7 +26,7 @@ const ContactSection = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   Email Us
                 </h3>
-                <p className="text-gray-600">info@droisys.com</p>
+                <p className="text-gray-600">info@Bravsys.com</p>
               </div>
             </div>
 

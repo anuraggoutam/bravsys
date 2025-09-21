@@ -10,7 +10,7 @@ const ContactSection = () => {
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="text-4xl font-bold mb-6">Let's work together</h2>
           <p className="text-lg text-gray-600">
-            At Droisys, we share a unified mindset, no matter where our team is located. We're driven by a passion for innovation, great ideas, and the execution needed to create exceptional experiences. One Mantra, Worldwide.
+            At Bravsys, we share a unified mindset, no matter where our team is located. We're driven by a passion for innovation, great ideas, and the execution needed to create exceptional experiences. One Mantra, Worldwide.
           </p>
         </div>
         
@@ -62,7 +62,7 @@ const ContactSection = () => {
           
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6">DROISYS</h3>
+              <h3 className="text-2xl font-bold mb-6">Bravsys</h3>
               <div className="space-y-4 text-gray-600">
                 <div>Home</div>
                 <div>About us</div>
@@ -78,7 +78,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <strong>Email</strong><br />
-                  sales@droisys.com
+                  sales@Bravsys.com
                 </div>
                 <div>
                   <strong>Fremont, CA</strong>

@@ -68,7 +68,7 @@ const About = () => {
           <div>
             <div className="inline-flex items-center px-4 py-2 bg-blue-50 rounded-full mb-6 border border-blue-100">
               <span className="text-sm font-medium text-blue-700">
-                About Droisys
+                About Bravsys
               </span>
             </div>
             <h2 className="text-5xl font-bold mb-8 text-gray-900 leading-tight">
