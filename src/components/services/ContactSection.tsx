@@ -10,7 +10,8 @@ const ContactSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6 text-gray-900">Contact Us</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Ready to start your digital transformation journey? Get in touch with our team of experts.
+            Ready to start your digital transformation journey? Get in touch
+            with our team of experts.
           </p>
         </div>
 
@@ -22,9 +23,10 @@ const ContactSection = () => {
                 <Mail className="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Email Us
+                </h3>
                 <p className="text-gray-600">info@droisys.com</p>
-                <p className="text-gray-600">hello@droisys.com</p>
               </div>
             </div>
 
@@ -33,9 +35,10 @@ const ContactSection = () => {
                 <Phone className="w-6 h-6 text-green-600" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
-                <p className="text-gray-600">+1 (555) 123-4567</p>
-                <p className="text-gray-600">+1 (555) 987-6543</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Call Us
+                </h3>
+                <p className="text-gray-600">+91 93104300779</p>
               </div>
             </div>
 
@@ -44,10 +47,12 @@ const ContactSection = () => {
                 <MapPin className="w-6 h-6 text-purple-600" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
-                <p className="text-gray-600">123 Innovation Drive</p>
-                <p className="text-gray-600">Tech City, TC 12345</p>
-                <p className="text-gray-600">United States</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Visit Us
+                </h3>
+                <p className="text-gray-600">D-129B Street 14</p>
+                <p className="text-gray-600">West Vinod Nagar, Block D</p>
+                <p className="text-gray-600">Delhi 110092 India</p>
               </div>
             </div>
           </div>

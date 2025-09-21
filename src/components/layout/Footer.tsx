@@ -91,7 +91,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 text-gray-400" />
                 <span className="text-gray-400">
-                  D-129B Street 14, West Vinod Nagar, Block D, Delhi 110092
+                  D-129B Street 14, West Vinod Nagar, Block D, Delhi 110092 India
                 </span>
               </li>
             </ul>

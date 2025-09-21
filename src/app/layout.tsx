@@ -5,6 +5,7 @@ import "./App.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Toaster } from '@/components/ui/sonner';
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +34,9 @@ export default function RootLayout({
       >
         <div className="flex flex-col min-h-screen">
           <Header />
-          <main className="grow">{children}</main>
+          <main className="grow">
+            {children}</main>
+            <WhatsAppButton/>
           {/* Global toaster for notifications */}
           <Toaster
             position="top-right"

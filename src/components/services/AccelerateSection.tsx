@@ -31,25 +31,23 @@ const AccelerateSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link href="start-transformation">
-              <Button
-                variant="secondary"
-                size="lg"
-                className="bg-white hover:bg-white/90 text-primary px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-              >
-                
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  className="bg-white hover:bg-white/90 text-primary px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
+                >
                   Start Your Transformation
                   <ArrowRight className="ml-2 w-5 h-5" />
-                
-              </Button>
+                </Button>
               </Link>
               <Link href="contact">
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-white/30 hover:border-white/50 bg-white/10 text-white px-8 py-4 rounded-xl transition-all duration-300"
-              >
-                Schedule Consultation
-              </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-white/30 hover:border-white/50 bg-white/10 text-white px-8 py-4 rounded-xl transition-all duration-300 cursor-pointer"
+                >
+                  Schedule Consultation
+                </Button>
               </Link>
             </div>
           </div>

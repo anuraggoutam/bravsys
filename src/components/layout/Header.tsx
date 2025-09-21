@@ -13,7 +13,7 @@ const Header = () => {
 
   const navItems = [
     { name: 'Services', path: '/services' },
-    { name: 'Products', path: '/portfolio', hasDropdown: true },
+    // { name: 'Products', path: '/portfolio', hasDropdown: true },
 
     { name: 'Industries', path: '/industries' },
     { name: 'About Us', path: '/about-us' },
@@ -27,9 +27,6 @@ const Header = () => {
           <div className="flex space-x-6">
             <Link href="/blog" className="hover:text-gray-900 transition-colors">
               Articles
-            </Link>
-            <Link href="/blog" className="hover:text-gray-900 transition-colors">
-              News
             </Link>
             <Link
               href="/careers"
