@@ -30,7 +30,7 @@ const Cta = () => {
                     <SendIcon className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" className="border-white text-white hover:bg-white/10 transition-colors px-8 py-6 text-lg">
+                <Button asChild variant="outline" className="border-white text-white bg-white/10 transition-colors px-8 py-6 text-lg">
                   <Link href="/portfolio">View Our Work</Link>
                 </Button>
               </div>

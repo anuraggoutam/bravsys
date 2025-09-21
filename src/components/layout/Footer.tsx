@@ -82,16 +82,16 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Mail size={18} className="mr-2 mt-1 text-gray-400" />
-                <span className="text-gray-400">info@pixelperfect.com</span>
+                <span className="text-gray-400">info@bravsys.com</span>
               </li>
               <li className="flex items-start">
                 <Phone size={18} className="mr-2 mt-1 text-gray-400" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+91 9310430779</span>
               </li>
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 text-gray-400" />
                 <span className="text-gray-400">
-                  123 Design Street, Creative City, CA 94103
+                  D-129B Street 14, West Vinod Nagar, Block D, Delhi 110092
                 </span>
               </li>
             </ul>

@@ -3,42 +3,48 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { ArrowRight } from 'lucide-react';
+// import { ArrowRight } from 'lucide-react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const technologies = [
   {
-    title: 'Location Services',
-    description: 'Mobile technology has transformed how you connect with consumers. Use location-based technologies like iBeacons, geofencing, and Bluetooth to engage them anytime, anywhere. Bridge the digital and physical worlds with BLE Beacons, capturing their attention when it matters most. Deliver a top-tier experience with advanced location detection, providing targeted content and insights into consumer behavior and intentions.',
-    image: '/lovable-uploads/098ddfb0-5021-4ab0-a05c-0e0e823e0ad5.png'
+    title: 'AI-Powered Web Applications',
+    description:
+      'Transform your web applications with intelligent automation, machine learning integration, and predictive analytics. We build custom AI models for recommendation engines, chatbots, content personalization, and automated decision-making systems that drive business value and enhance user experiences.',
+    image: '/assets/AI-WEB.jpeg',
   },
   {
-    title: 'Gamification',
-    description: 'Engage your customers and drive behavior with gamification tactics. We help you use gamification platforms to boost loyalty and reward customers for interacting with your brand. Leading companies use gamification to enhance loyalty programs and increase engagement. Let us help you integrate these tactics into your new or existing technology solutions to strengthen your brand.',
-    image: '/lovable-uploads/4db42747-45ee-4538-81db-fc44e19b088d.png'
+    title: 'Full-Stack Development',
+    description:
+      'Complete end-to-end web solutions using modern frameworks like React, Next.js, Node.js, and Express. We build scalable, responsive applications with TypeScript, implement real-time features, and ensure optimal performance across all devices and platforms.',
+    image: '/assets/FST.jpeg',
   },
   {
-    title: 'Augmented Reality',
-    description: 'Use augmented reality on smartphones or wearables like smart glasses to enhance real-world perception and create interactive experiences. Consumers can scan objects and bring them to life digitally, activating products, displays, and ads with their own devices. Just point, shoot, and watch as a wealth of content appears on their screens from multiple data sources.',
-    image: '/lovable-uploads/ecc5aee1-ddcf-4c1a-a63c-e429ee93a9c0.png'
+    title: 'Progressive Web Apps',
+    description:
+      'Create app-like experiences on the web with PWAs that work offline, load instantly, and provide native mobile functionality. Combine the best of web and mobile apps with push notifications, background sync, and seamless cross-platform performance.',
+    image: '/assets/PWA.jpeg',
   },
   {
-    title: 'Machine Learning',
-    description: 'Transform your business with intelligent automation and predictive analytics. Our machine learning solutions help you make data-driven decisions, automate complex processes, and unlock insights from your data. From recommendation engines to fraud detection, we build custom ML models that drive business value.',
-    image: '/lovable-uploads/77bcef79-79c7-400e-8893-48a86e18f5bb.png'
+    title: 'Marketing Automation',
+    description:
+      'Streamline your digital marketing with intelligent automation tools. We implement omnichannel marketing workflows, lead nurturing systems, email automation, social media scheduling, and analytics dashboards that convert prospects into customers automatically.',
+    image: '/assets/MRKT.jpeg',
   },
   {
-    title: 'Cloud Computing',
-    description: 'Leverage the power of cloud infrastructure to scale your applications and reduce costs. We help you migrate to the cloud, optimize your architecture, and implement best practices for security and performance. Our cloud solutions are designed to grow with your business.',
-    image: '/lovable-uploads/098ddfb0-5021-4ab0-a05c-0e0e823e0ad5.png'
+    title: 'Cloud & DevOps Solutions',
+    description:
+      'Deploy and scale your applications with modern cloud infrastructure. We provide Docker containerization, CI/CD pipelines, server management, SSL configuration, and automated deployment workflows on platforms like AWS, Digital Ocean, and Azure.',
+    image: '/assets/DevOps.jpeg',
   },
   {
-    title: 'Mobile Development',
-    description: 'Create engaging mobile experiences that delight your users. Our mobile development team builds native and cross-platform applications that are fast, secure, and user-friendly. From iOS to Android, we cover all major platforms.',
-    image: '/lovable-uploads/4db42747-45ee-4538-81db-fc44e19b088d.png'
-  }
+    title: 'E-commerce & CMS Development',
+    description:
+      'Build powerful online stores and content management systems with seamless payment integration, inventory management, SEO optimization, and user-friendly admin panels. From simple business websites to complex multi-vendor platforms.',
+    image: '/assets/ecom.jpeg',
+  },
 ];
 
 const TechnologiesSection = () => {
@@ -80,7 +86,7 @@ const TechnologiesSection = () => {
           className="technologies-swiper"
         >
           {technologies.map((tech, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className='pb-10'>
               <div className="group bg-card/60 backdrop-blur-xs rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-border/50 hover:border-primary/20 transition-all duration-500 h-full transform hover:-translate-y-2">
                 <div className="relative h-48 overflow-hidden">
                   <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent z-10"></div>
@@ -97,12 +103,13 @@ const TechnologiesSection = () => {
                   <p className="text-muted-foreground leading-relaxed text-sm line-clamp-4">
                     {tech.description}
                   </p>
-                  <div className="flex items-center text-primary font-medium text-sm group-hover:translate-x-2 transition-transform duration-300">
+                  {/* <div className="flex items-center text-primary font-medium text-sm group-hover:translate-x-2 transition-transform duration-300">
                     Learn more 
                     <ArrowRight size={14} className="ml-2 group-hover:rotate-12 transition-transform duration-300" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
+              
             </SwiperSlide>
           ))}
         </Swiper>

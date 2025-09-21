@@ -15,11 +15,7 @@ const Contact = () => {
     e.preventDefault();
 
     // In a real application, you would submit this to your backend
-    toast({
-      title: 'Message Sent',
-      description: "Thank you for your message. We'll get back to you shortly.",
-      duration: 5000,
-    });
+    toast.success("hii");
 
     // Reset form
     e.currentTarget.reset();
