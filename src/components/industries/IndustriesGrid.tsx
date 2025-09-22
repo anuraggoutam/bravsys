@@ -7,8 +7,7 @@ const IndustriesGrid = () => {
       title: 'Technology & Innovation',
       description:
         'We leverage cutting-edge technology solutions to transform business operations across industries. With years of experience in technology consulting, we design seamless solutions that help organizations and their stakeholders deliver exceptional experiences. Trusted by Fortune 500 companies, we provide tailored solutions that elevate efficiency and streamline operations.',
-      image:
-        'https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&q=80&w=500',
+      image: '/assets/INVO.jpg',
     },
     {
       title: 'Healthcare Technology',
