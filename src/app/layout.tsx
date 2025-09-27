@@ -1,11 +1,13 @@
-import type { Metadata } from "next";
+import "./globals.css";
+import "./App.css";
+import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import StructuredData from '../components/SEO/StructuredData';
 import generateMetadata from '../components/SEO/Metadata';
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/sonner';
-import WhatsAppButton from "@/components/shared/WhatsAppButton";
+import WhatsAppButton from '@/components/shared/WhatsAppButton';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -58,3 +60,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+
