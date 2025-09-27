@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+//
 import {
   Facebook,
   Twitter,
@@ -12,6 +11,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import NewsletterForm from './NewsletterForm';
 
 const Footer = () => {
   return (
@@ -145,14 +145,7 @@ const Footer = () => {
               Subscribe to our newsletter for the latest news and insights.
             </p>
             <div className="flex flex-col space-y-2">
-              <Input
-                type="email"
-                placeholder="Your email address"
-                className="bg-gray-800 border-gray-700 text-white"
-              />
-              <Button className="gradient-bg hover:opacity-90 transition-opacity">
-                Subscribe
-              </Button>
+              <NewsletterForm />
             </div>
           </div>
         </div>

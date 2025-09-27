@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
@@ -26,7 +25,7 @@ const ContactSection = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   Email Us
                 </h3>
-                <p className="text-gray-600">info@Bravsys.com</p>
+                <p className="text-gray-600">info@bravsys.com</p>
               </div>
             </div>
 

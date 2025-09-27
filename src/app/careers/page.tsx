@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -32,104 +32,19 @@ import Link from 'next/link';
 const jobOpenings = [
   {
     id: 1,
-    title: 'Senior Full Stack Developer',
-    department: 'Engineering',
-    location: 'Remote / New York',
-    type: 'Full-time',
-    experience: '5+ years',
-    salary: '$120k - $180k',
-    description:
-      'Lead the development of scalable web applications using React, Node.js, and cloud technologies.',
-    requirements: [
-      'React/TypeScript expertise',
-      'Node.js backend experience',
-      'AWS/Cloud platforms',
-      'Team leadership skills',
-    ],
-  },
-  {
-    id: 2,
-    title: 'AI/ML Engineer',
-    department: 'AI & Data',
-    location: 'San Francisco / Remote',
-    type: 'Full-time',
-    experience: '3+ years',
-    salary: '$140k - $200k',
-    description:
-      'Build and deploy machine learning models to solve complex business problems.',
-    requirements: [
-      'Python/TensorFlow',
-      'ML algorithms',
-      'Data pipeline design',
-      'Model deployment',
-    ],
-  },
-  {
-    id: 3,
-    title: 'Product Designer',
-    department: 'Design',
-    location: 'Los Angeles / Remote',
-    type: 'Full-time',
-    experience: '4+ years',
-    salary: '$100k - $140k',
-    description:
-      'Create intuitive user experiences and design systems for our digital products.',
-    requirements: [
-      'Figma/Design tools',
-      'UX research',
-      'Design systems',
-      'Prototyping',
-    ],
-  },
-  {
-    id: 4,
-    title: 'DevOps Engineer',
-    department: 'Infrastructure',
-    location: 'Remote',
-    type: 'Full-time',
-    experience: '4+ years',
-    salary: '$110k - $160k',
-    description:
-      'Build and maintain robust CI/CD pipelines and cloud infrastructure.',
-    requirements: [
-      'AWS/GCP/Azure',
-      'Kubernetes/Docker',
-      'CI/CD pipelines',
-      'Infrastructure as Code',
-    ],
-  },
-  {
-    id: 5,
-    title: 'Business Development Manager',
+    title: 'Commission-Based Sales Intern',
     department: 'Sales',
-    location: 'Boston / Remote',
-    type: 'Full-time',
-    experience: '3+ years',
-    salary: '$90k - $130k + Commission',
-    description:
-      'Drive growth by building relationships with enterprise clients and partners.',
-    requirements: [
-      'B2B sales experience',
-      'Client relationship management',
-      'Strategic planning',
-      'Communication skills',
-    ],
-  },
-  {
-    id: 6,
-    title: 'Data Analyst',
-    department: 'Analytics',
     location: 'Remote',
-    type: 'Full-time',
-    experience: '2+ years',
-    salary: '$80k - $110k',
+    type: 'Internship (Commission Only)',
+    experience: 'Open to students/freshers',
+    salary: '10% commission per closed project',
     description:
-      'Analyze complex datasets to drive business insights and strategic decisions.',
+      'Source and refer web/app development projects. For every project that closes with our team, you earn a 10% commission of the project value.',
     requirements: [
-      'SQL/Python',
-      'Data visualization',
-      'Statistical analysis',
-      'Business intelligence tools',
+      'Strong communication and networking',
+      'Basic understanding of web/app services (websites, MERN/Next.js, APIs, DevOps)',
+      'Lead generation via LinkedIn, email, and outreach',
+      'Self-motivated with follow-up discipline',
     ],
   },
 ];
@@ -294,10 +209,10 @@ const Careers = () => {
                         index === 0
                           ? 'bg-linear-to-br from-blue-500 to-blue-600'
                           : index === 1
-                          ? 'bg-linear-to-br from-purple-500 to-purple-600'
-                          : index === 2
-                          ? 'bg-linear-to-br from-indigo-500 to-indigo-600'
-                          : 'bg-linear-to-br from-teal-500 to-cyan-500'
+                            ? 'bg-linear-to-br from-purple-500 to-purple-600'
+                            : index === 2
+                              ? 'bg-linear-to-br from-indigo-500 to-indigo-600'
+                              : 'bg-linear-to-br from-teal-500 to-cyan-500'
                       }`}
                     >
                       <value.icon size={24} className="text-white" />
@@ -342,7 +257,7 @@ const Careers = () => {
                   <Button
                     key={dept}
                     variant={
-                      selectedDepartment === dept ? 'default' : 'outline-solid'
+                      selectedDepartment === dept ? 'default' : 'outline'
                     }
                     onClick={() => setSelectedDepartment(dept)}
                     className={
@@ -372,14 +287,14 @@ const Careers = () => {
                             job.department === 'Engineering'
                               ? 'border-blue-300 text-blue-700 bg-blue-50'
                               : job.department === 'AI & Data'
-                              ? 'border-purple-300 text-purple-700 bg-purple-50'
-                              : job.department === 'Design'
-                              ? 'border-pink-300 text-pink-700 bg-pink-50'
-                              : job.department === 'Infrastructure'
-                              ? 'border-teal-300 text-teal-700 bg-teal-50'
-                              : job.department === 'Sales'
-                              ? 'border-green-300 text-green-700 bg-green-50'
-                              : 'border-indigo-300 text-indigo-700 bg-indigo-50'
+                                ? 'border-purple-300 text-purple-700 bg-purple-50'
+                                : job.department === 'Design'
+                                  ? 'border-pink-300 text-pink-700 bg-pink-50'
+                                  : job.department === 'Infrastructure'
+                                    ? 'border-teal-300 text-teal-700 bg-teal-50'
+                                    : job.department === 'Sales'
+                                      ? 'border-green-300 text-green-700 bg-green-50'
+                                      : 'border-indigo-300 text-indigo-700 bg-indigo-50'
                           }`}
                         >
                           {job.department}
@@ -430,7 +345,8 @@ const Careers = () => {
                     </div>
 
                     <Button className="w-full bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300">
-                      Apply Now
+                      <a href="mailto:info@bravsys.com">Apply Now</a>
+
                       <ArrowRight size={16} className="ml-2" />
                     </Button>
                   </CardContent>
@@ -466,14 +382,14 @@ const Careers = () => {
                       index === 0
                         ? 'bg-linear-to-br from-green-500 to-emerald-500'
                         : index === 1
-                        ? 'bg-linear-to-br from-blue-500 to-cyan-500'
-                        : index === 2
-                        ? 'bg-linear-to-br from-purple-500 to-violet-500'
-                        : index === 3
-                        ? 'bg-linear-to-br from-orange-500 to-amber-500'
-                        : index === 4
-                        ? 'bg-linear-to-br from-pink-500 to-rose-500'
-                        : 'bg-linear-to-br from-indigo-500 to-blue-500'
+                          ? 'bg-linear-to-br from-blue-500 to-cyan-500'
+                          : index === 2
+                            ? 'bg-linear-to-br from-purple-500 to-violet-500'
+                            : index === 3
+                              ? 'bg-linear-to-br from-orange-500 to-amber-500'
+                              : index === 4
+                                ? 'bg-linear-to-br from-pink-500 to-rose-500'
+                                : 'bg-linear-to-br from-indigo-500 to-blue-500'
                     }`}
                   >
                     <benefit.icon size={24} className="text-white" />

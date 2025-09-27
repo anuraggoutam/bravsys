@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -9,16 +9,39 @@ import { toast } from 'sonner';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
 const Contact = () => {
-  
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // In a real application, you would submit this to your backend
-    toast.success("hii");
+    const form = e.currentTarget as HTMLFormElement;
+    const formData = new FormData(form);
+    const name = String(formData.get('name') || '').trim();
+    const email = String(formData.get('email') || '').trim();
+    const subject = String(formData.get('subject') || '').trim();
+    const message = String(formData.get('message') || '').trim();
+    const hp = String(formData.get('hp') || '').trim();
 
-    // Reset form
-    e.currentTarget.reset();
+    if (!name || !email || !message) {
+      toast.error('Please fill out name, email, and message.');
+      return;
+    }
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          hp,
+          message: subject ? `${subject}\n\n${message}` : message,
+        }),
+      });
+      if (!res.ok) throw new Error('Failed to send');
+      toast.success('Thanks! We will get back to you shortly.');
+      form.reset();
+    } catch (err) {
+      toast.error('Could not send your message. Please try again later.');
+    }
   };
 
   return (
@@ -31,8 +54,8 @@ const Contact = () => {
               Get in <span className="gradient-text">Touch</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Have a project in mind or questions about our services? We'd love
-              to hear from you.
+              Have a project in mind or questions about our services? We&apos;d
+              love to hear from you.
             </p>
           </div>
         </div>
@@ -51,10 +74,10 @@ const Contact = () => {
                 For general inquiries and project quotes
               </p>
               <a
-                href="mailto:info@pixelperfect.com"
+                href="mailto:info@bravsys.com"
                 className="text-brand-purple font-medium"
               >
-                info@pixelperfect.com
+                info@bravsys.com
               </a>
             </Card>
 
@@ -101,20 +124,26 @@ const Contact = () => {
             <div>
               <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
               <p className="text-gray-600 mb-8">
-                Fill out the form below, and we'll get back to you as soon as
-                possible.
+                Fill out the form below, and we&apos;ll get back to you as soon
+                as possible.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="name">Your Name</Label>
-                    <Input id="name" placeholder="John Doe" required />
+                    <Input
+                      id="name"
+                      name="name"
+                      placeholder="John Doe"
+                      required
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email Address</Label>
                     <Input
                       id="email"
+                      name="email"
                       type="email"
                       placeholder="john@example.com"
                       required
@@ -123,9 +152,19 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
+                  {/* Honeypot */}
+                  <input
+                    type="text"
+                    name="hp"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    className="hidden"
+                    aria-hidden="true"
+                  />
                   <Label htmlFor="subject">Subject</Label>
                   <Input
                     id="subject"
+                    name="subject"
                     placeholder="How can we help you?"
                     required
                   />
@@ -135,6 +174,7 @@ const Contact = () => {
                   <Label htmlFor="message">Message</Label>
                   <Textarea
                     id="message"
+                    name="message"
                     placeholder="Tell us about your project, goals, or questions..."
                     rows={6}
                     required
@@ -197,8 +237,7 @@ const Contact = () => {
                   <Mail className="text-brand-purple mr-3 mt-1" size={20} />
                   <div>
                     <h4 className="font-bold mb-1">Email</h4>
-                    <p className="text-gray-600">info@pixelperfect.com</p>
-                    <p className="text-gray-600">support@pixelperfect.com</p>
+                    <p className="text-gray-600">info@bravsys.com</p>
                   </div>
                 </div>
 
@@ -234,7 +273,7 @@ const Contact = () => {
                 </h3>
                 <p className="text-gray-600 mb-6">
                   Our process typically includes discovery, planning, design,
-                  development, testing, and launch phases. We'll guide you
+                  development, testing, and launch phases. We&apos;ll guide you
                   through each step and keep you informed throughout.
                 </p>
 
@@ -297,7 +336,7 @@ const Contact = () => {
               Ready to Start Your Project?
             </h2>
             <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-              Let's bring your vision to life and create something amazing
+              Let&apos;s bring your vision to life and create something amazing
               together.
             </p>
             <Button className="bg-white text-brand-purple hover:bg-gray-100 transition-colors px-8 py-6 text-lg">

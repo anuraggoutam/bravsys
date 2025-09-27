@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -18,10 +18,15 @@ import { useParams } from 'next/navigation';
 import Image from 'next/image';
 
 const BlogPost = () => {
-  const { id } = useParams();
+  const params = useParams<{ id: string | string[] }>();
+  const idParam = Array.isArray(params.id) ? params.id[0] : params.id;
+  const numericId = Number.parseInt(idParam ?? '', 10);
   const { getBlogPost, getRelatedPosts } = useBlog();
-  const post = getBlogPost(parseInt(id || ''));
-  const relatedPosts = getRelatedPosts(parseInt(id || ''), 3);
+  const post = getBlogPost(Number.isFinite(numericId) ? numericId : NaN);
+  const relatedPosts = getRelatedPosts(
+    Number.isFinite(numericId) ? numericId : NaN,
+    3
+  );
 
   if (!post) {
     return (
@@ -30,7 +35,9 @@ const BlogPost = () => {
           <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <BookOpen className="w-8 h-8 text-red-600" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Article Not Found</h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            Article Not Found
+          </h1>
           <p className="text-gray-600 mb-8 leading-relaxed">
             The article you're looking for doesn't exist or may have been moved.
           </p>
@@ -50,7 +57,11 @@ const BlogPost = () => {
       {/* Navigation Bar */}
       <div className="border-b border-gray-100 bg-white/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
-          <Button variant="ghost" asChild className="text-gray-600 hover:text-gray-900">
+          <Button
+            variant="ghost"
+            asChild
+            className="text-gray-600 hover:text-gray-900"
+          >
             <Link href="/blog">
               <ArrowLeft size={18} className="mr-2" />
               Back to Blog
@@ -96,11 +107,15 @@ const BlogPost = () => {
                   className="w-12 h-12 rounded-full ring-2 ring-gray-100"
                 />
                 <div>
-                  <div className="font-semibold text-gray-900">{post.author.name}</div>
-                  <div className="text-sm text-gray-600">{post.author.role}</div>
+                  <div className="font-semibold text-gray-900">
+                    {post.author.name}
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    {post.author.role}
+                  </div>
                 </div>
               </div>
-              
+
               <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
                 <div className="flex items-center gap-1">
                   <Calendar size={16} />
@@ -148,7 +163,7 @@ const BlogPost = () => {
               <div className="lg:col-span-3">
                 <div className="max-w-none">
                   {/* Content Wrapper with Better Typography */}
-                  <div 
+                  <div
                     className="prose prose-xl prose-gray max-w-none
                       prose-headings:font-bold prose-headings:text-gray-900 prose-headings:tracking-tight
                       prose-h1:text-4xl prose-h1:leading-tight prose-h1:mb-8
@@ -167,12 +182,14 @@ const BlogPost = () => {
 
                 {/* Tags Section */}
                 <div className="mt-12 pt-8 border-t border-gray-200">
-                  <h3 className="text-xl font-bold text-gray-900 mb-6">Topics</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-6">
+                    Topics
+                  </h3>
                   <div className="flex flex-wrap gap-3">
                     {post.tags.map((tag) => (
-                      <Badge 
-                        key={tag} 
-                        variant="outline" 
+                      <Badge
+                        key={tag}
+                        variant="outline"
                         className="px-4 py-2 text-sm hover:bg-blue-50 hover:border-blue-200 hover:text-blue-700 transition-colors cursor-pointer"
                       >
                         {tag}
@@ -195,11 +212,15 @@ const BlogPost = () => {
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">
                         {post.author.name}
                       </h3>
-                      <p className="text-blue-600 font-medium mb-4">{post.author.role}</p>
+                      <p className="text-blue-600 font-medium mb-4">
+                        {post.author.role}
+                      </p>
                       <p className="text-gray-700 leading-relaxed">
-                        Passionate about creating exceptional digital experiences and sharing knowledge 
-                        with the design community. With over 5 years of experience in web development 
-                        and UI/UX design, I love exploring new technologies and best practices.
+                        Passionate about creating exceptional digital
+                        experiences and sharing knowledge with the design
+                        community. With over 5 years of experience in web
+                        development and UI/UX design, I love exploring new
+                        technologies and best practices.
                       </p>
                       <div className="flex items-center gap-2 mt-4">
                         <div className="flex items-center gap-1 text-sm text-gray-600">
@@ -269,7 +290,8 @@ const BlogPost = () => {
                       Get more insights
                     </h3>
                     <p className="text-sm text-gray-600 mb-4">
-                      Subscribe to our newsletter for the latest articles and insights.
+                      Subscribe to our newsletter for the latest articles and
+                      insights.
                     </p>
                     <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2">
                       Subscribe Now

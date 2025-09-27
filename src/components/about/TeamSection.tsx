@@ -10,7 +10,7 @@ const TeamSection = () => {
     },
     {
       name: 'Anjali Thakur',
-      title: 'Project Manager / UI/UX Designer',
+      title: 'Co-Founder / UI/UX Designer',
       image: '/assets/team/Anjii.jpg',
     },
   ];

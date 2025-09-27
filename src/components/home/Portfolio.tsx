@@ -105,9 +105,7 @@ const Portfolio = () => {
           {categories.map((category) => (
             <Button
               key={category}
-              variant={
-                activeCategory === category ? 'default' : 'outline-solid'
-              }
+              variant={activeCategory === category ? 'default' : 'outline'}
               className={activeCategory === category ? 'gradient-bg' : ''}
               onClick={() => setActiveCategory(category)}
             >

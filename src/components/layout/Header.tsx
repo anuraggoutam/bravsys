@@ -12,7 +12,8 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const navItems = [
+  type NavItem = { name: string; path: string; hasDropdown?: boolean };
+  const navItems: NavItem[] = [
     { name: 'Services', path: '/services' },
     // { name: 'Products', path: '/portfolio', hasDropdown: true },
     { name: 'Industries', path: '/industries' },
@@ -61,9 +62,9 @@ const Header = () => {
                   className="text-gray-600 hover:text-gray-900 transition-colors duration-200 flex items-center"
                 >
                   {item.name}
-                  {item.hasDropdown && (
+                  {item.hasDropdown ? (
                     <ChevronDown size={16} className="ml-1" />
-                  )}
+                  ) : null}
                 </Link>
               </div>
             ))}
