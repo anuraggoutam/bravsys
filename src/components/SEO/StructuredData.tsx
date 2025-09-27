@@ -2,8 +2,8 @@ import Script from "next/script";
 
 // Add your social media information here
 const SOCIAL_MEDIA = {
-  twitter: "https://x.com/vertexweb_",
-  instagram: "https://www.instagram.com/vertexweb_/",
+  twitter: "https://x.com/bravsys_",
+  instagram: "https://www.instagram.com/bravsys_/",
   facebook: "https://www.facebook.com/profile.php?id=61572442240215",
   linkedin: "www.linkedin.com/in/anurag-gautam-52b899218",
 };

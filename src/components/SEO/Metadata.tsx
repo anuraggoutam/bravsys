@@ -8,13 +8,13 @@ interface MetadataProps {
   nofollow?: boolean;
 }
 
-const SITE_NAME = 'VertexWeb';
+const SITE_NAME = 'bravsys';
 const DEFAULT_URL = 'https://bravsys.com';
 
 // Add social media information
 const SOCIAL_MEDIA = {
-  twitter: 'https://x.com/vertexweb_',
-  instagram: 'https://www.instagram.com/vertexweb_/',
+  twitter: 'https://x.com/bravsys_',
+  instagram: 'https://www.instagram.com/bravsys_/',
   facebook: 'https://www.facebook.com/profile.php?id=61572442240215',
   linkedin: 'www.linkedin.com/in/anurag-gautam-52b899218',
 };
@@ -78,7 +78,7 @@ const DEFAULT_METADATA: Metadata = {
     'website analytics',
     'conversion rate optimization',
   ],
-  authors: [{ name: 'VertexWeb' }],
+  authors: [{ name: 'bravsys' }],
   openGraph: {
     type: 'website',
     url: DEFAULT_URL,
