@@ -106,10 +106,10 @@ const About = () => {
                   </p>
                   <div>
                     <p className="font-bold text-gray-900 text-lg">
-                      Sanjiv Goyal
+                      Anjali Thakur
                     </p>
                     <p className="text-blue-600 font-medium">
-                      President & Founder
+                      Co-Founder / UI/UX Designer
                     </p>
                   </div>
                 </div>
