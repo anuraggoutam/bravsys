@@ -21,7 +21,7 @@ const testimonials: Testimonial[] = [
     name: 'Sarah Johnson',
     title: 'CTO',
     company: 'TechCorp Industries',
-    image: 'https://randomuser.me/api/portraits/women/45.jpg',
+    image: '/assets/user.webp',
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const testimonials: Testimonial[] = [
     name: 'Michael Chen',
     title: 'VP of Digital Strategy',
     company: 'Global Finance Corp',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+    image: '/assets/user.webp',
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const testimonials: Testimonial[] = [
     name: 'Amanda Rodriguez',
     title: 'Head of Analytics',
     company: 'Innovation Labs',
-    image: 'https://randomuser.me/api/portraits/women/68.jpg',
+    image: '/assets/user.webp',
   },
 ];
 

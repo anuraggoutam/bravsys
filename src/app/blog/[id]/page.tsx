@@ -6,6 +6,7 @@ import {
   ArrowLeft,
   Calendar,
   Clock,
+  User,
   Share2,
   BookOpen,
   Eye,
@@ -15,9 +16,48 @@ import { useBlog } from '@/hooks/useBlog';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
-import NewsletterSubscription from '@/components/shared/NewsletterSubscription';
+
+// lib/newsletter.ts
+async function subscribeToNewsletter(email: string, hp: string = '') {
+  if (hp) return { ok: false, message: 'Bot detected' };
+
+  if (!email.trim()) {
+    return { ok: false, message: 'Please enter your email' };
+  }
+
+  try {
+    const res = await fetch('/api/newsletter', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, hp }),
+    });
+
+    if (!res.ok) throw new Error('Failed');
+    return { ok: true, message: 'Subscribed successfully!' };
+  } catch (err) {
+    return {
+      ok: false,
+      message: 'Subscription failed. Please try again later.',
+    };
+  }
+}
 
 const BlogPost = () => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const email = (form.newsletterEmail?.value || '').trim();
+    const hp = (form.hp?.value || '').trim();
+
+    const result = await subscribeToNewsletter(email, hp);
+
+    if (result.ok) {
+      toast.success(result.message);
+      form.reset();
+    } else {
+      toast.error(result.message);
+    }
+  };
   const params = useParams<{ id: string | string[] }>();
   const idParam = Array.isArray(params.id) ? params.id[0] : params.id;
   const numericId = Number.parseInt(idParam ?? '', 10);
@@ -285,11 +325,18 @@ const BlogPost = () => {
                   </div>
 
                   {/* Newsletter Signup */}
-                  <NewsletterSubscription
-                    title="Get more insights"
-                    description="Subscribe to our newsletter for the latest articles and insights."
-                    variant="compact"
-                  />
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3">
+                      Get more insights
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-4">
+                      Subscribe to our newsletter for the latest articles and
+                      insights.
+                    </p>
+                    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2">
+                      Subscribe Now
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>

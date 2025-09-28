@@ -194,7 +194,7 @@ const Blog = () => {
           ))}
         </div>
 
-        {/* Newsletter Subscription */}
+        {/* Newsletter Subscription
         <div className="bg-linear-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-center text-white mb-12">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
             Stay Updated with Industry Insights
@@ -208,13 +208,13 @@ const Blog = () => {
             <input
               type="email"
               placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-100 placeholder-gray-400 focus:outline-hidden focus:ring-2 focus:ring-white border-2 border-amber-50 "
+              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-700 focus:outline-hidden focus:ring-2 focus:ring-white border-2 border-amber-50"
             />
             <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
               Subscribe
             </Button>
           </div>
-        </div>
+        </div> */}
 
         {/* Call to Action */}
         <div className="text-center">
