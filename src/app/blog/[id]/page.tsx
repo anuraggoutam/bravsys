@@ -6,7 +6,6 @@ import {
   ArrowLeft,
   Calendar,
   Clock,
-  User,
   Share2,
   BookOpen,
   Eye,
@@ -16,6 +15,7 @@ import { useBlog } from '@/hooks/useBlog';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
+import NewsletterSubscription from '@/components/shared/NewsletterSubscription';
 
 const BlogPost = () => {
   const params = useParams<{ id: string | string[] }>();
@@ -285,18 +285,11 @@ const BlogPost = () => {
                   </div>
 
                   {/* Newsletter Signup */}
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100">
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">
-                      Get more insights
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-4">
-                      Subscribe to our newsletter for the latest articles and
-                      insights.
-                    </p>
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2">
-                      Subscribe Now
-                    </Button>
-                  </div>
+                  <NewsletterSubscription
+                    title="Get more insights"
+                    description="Subscribe to our newsletter for the latest articles and insights."
+                    variant="compact"
+                  />
                 </div>
               </div>
             </div>

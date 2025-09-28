@@ -37,17 +37,61 @@ export async function POST(req: NextRequest) {
       rateLimit.set(ip, curr);
     }
 
+    // Validate required fields
     if (!name || !email || !message) {
+      const missingFields = [];
+      if (!name) missingFields.push('name');
+      if (!email) missingFields.push('email');
+      if (!message) missingFields.push('message');
+      
       return NextResponse.json(
-        { message: 'Missing required fields: name, email, message' },
+        { 
+          message: `Missing required fields: ${missingFields.join(', ')}`,
+          fields: missingFields
+        },
         { status: 400 }
       );
     }
 
+    // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { message: 'Invalid email address' },
+        { 
+          message: 'Please enter a valid email address',
+          field: 'email'
+        },
+        { status: 400 }
+      );
+    }
+
+    // Validate field lengths
+    if (name.length > 100) {
+      return NextResponse.json(
+        { 
+          message: 'Name is too long (maximum 100 characters)',
+          field: 'name'
+        },
+        { status: 400 }
+      );
+    }
+
+    if (email.length > 254) {
+      return NextResponse.json(
+        { 
+          message: 'Email address is too long',
+          field: 'email'
+        },
+        { status: 400 }
+      );
+    }
+
+    if (message.length > 2000) {
+      return NextResponse.json(
+        { 
+          message: 'Message is too long (maximum 2000 characters)',
+          field: 'message'
+        },
         { status: 400 }
       );
     }
