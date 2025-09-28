@@ -5,7 +5,7 @@ import Image from 'next/image';
 interface BlogCardProps {
   blog: Blog;
 }
-
+//  blog
 export default function BlogCard({ blog }: BlogCardProps) {
   return (
     <article className="bg-white/5 rounded-2xl  shadow-lg overflow-hidden transition-transform duration-300 hover:transform hover:-translate-y-2 mx-6 sm:mx-4 ">
