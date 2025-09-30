@@ -86,12 +86,12 @@ const Contact = () => {
                 <Phone size={24} />
               </div>
               <h3 className="text-lg font-bold mb-2">Call Us</h3>
-              <p className="text-gray-600 mb-4">Monday to Friday, 9am to 5pm</p>
+              <p className="text-gray-600 mb-4">Monday to Saturday 10am to 6pm</p>
               <a
                 href="tel:+15551234567"
                 className="text-brand-purple font-medium"
               >
-                +1 (555) 123-4567
+                +91 9310430779
               </a>
             </Card>
 
@@ -101,7 +101,7 @@ const Contact = () => {
               </div>
               <h3 className="text-lg font-bold mb-2">Visit Us</h3>
               <p className="text-gray-600 mb-4">
-                123 Design Street, Creative City, CA 94103
+                D-129B Street 14, West Vinod Nagar, Block D, Delhi 110092 India
               </p>
               <a
                 href="https://maps.google.com"
@@ -217,7 +217,8 @@ const Contact = () => {
                   <div>
                     <h4 className="font-bold mb-1">Address</h4>
                     <p className="text-gray-600">
-                      123 Design Street, Creative City, CA 94103
+                      D-129B Street 14, West Vinod Nagar, Block D, Delhi 110092
+                      India
                     </p>
                   </div>
                 </div>
@@ -227,9 +228,9 @@ const Contact = () => {
                   <div>
                     <h4 className="font-bold mb-1">Business Hours</h4>
                     <p className="text-gray-600">
-                      Monday - Friday: 9:00 AM - 5:00 PM
+                      Monday - Friday: 10:00 AM - 6:00 PM
                     </p>
-                    <p className="text-gray-600">Saturday - Sunday: Closed</p>
+                    <p className="text-gray-600">Sunday Closed</p>
                   </div>
                 </div>
 
@@ -245,8 +246,7 @@ const Contact = () => {
                   <Phone className="text-brand-purple mr-3 mt-1" size={20} />
                   <div>
                     <h4 className="font-bold mb-1">Phone</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-gray-600">+1 (555) 987-6543</p>
+                    <p className="text-gray-600">+91 9310430779</p>
                   </div>
                 </div>
               </div>

@@ -1,41 +1,43 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Play, Users, Award, Globe, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import Image from 'next/image';
 
 const WatchOurStory = () => {
-  const milestones = [
-    {
-      year: '2002',
-      title: 'Founded with Vision',
-      description:
-        'Started as a small team with big dreams to revolutionize digital transformation.',
-    },
-    {
-      year: '2008',
-      title: 'First Fortune 100 Client',
-      description:
-        'Secured our first major enterprise client, marking our entry into large-scale transformations.',
-    },
-    {
-      year: '2015',
-      title: 'AI Innovation Lab',
-      description:
-        'Established our dedicated AI research division to stay ahead of emerging technologies.',
-    },
-    {
-      year: '2020',
-      title: 'Global Expansion',
-      description:
-        'Expanded operations across 15 countries, serving clients on every continent.',
-    },
-    {
-      year: '2024',
-      title: 'Industry Leader',
-      description:
-        'Recognized as the leading AI and digital transformation partner for Fortune 100 companies.',
-    },
-  ];
+const milestones = [
+  {
+    year: '2017',
+    title: 'Idea Sparked',
+    description:
+      'The vision for building a next-gen digital solutions company was born — small idea, big dreams.',
+  },
+  {
+    year: '2020',
+    title: 'Skills & Foundation',
+    description:
+      'Spent years mastering software development, scaling architectures, and preparing for entrepreneurship.',
+  },
+  {
+    year: '2023',
+    title: 'Blueprint Ready',
+    description:
+      'Bravsys brand identity took shape with clear focus on web, AI, and scalable digital solutions.',
+  },
+  {
+    year: '2025',
+    title: 'Official Launch with AI',
+    description:
+      'Founded Bravsys Web Agency — secured our first clients and introduced AI-powered solutions into our service offerings.',
+  },
+  {
+    year: '2027',
+    title: 'Vision 2027',
+    description:
+      'On the path to becoming a trusted global partner for startups and enterprises in AI and digital transformation.',
+  },
+];
+
 
   const achievements = [
     { icon: Users, number: '500+', label: 'Projects Delivered' },
@@ -76,15 +78,15 @@ const WatchOurStory = () => {
 
               <div className="flex flex-col sm:flex-row gap-6">
                 <Button className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                  Start Your Journey
+                  <Link href="/contact">Start Your Journey</Link>
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                <Button
+                {/* <Button
                   variant="outline"
                   className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6 rounded-xl"
                 >
                   Learn More
-                </Button>
+                </Button> */}
               </div>
             </div>
 
@@ -98,11 +100,6 @@ const WatchOurStory = () => {
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                  <Button className="bg-white/20 hover:bg-white/30 backdrop-blur-xs text-white border-2 border-white/30 w-20 h-20 rounded-full p-0">
-                    <Play className="w-8 h-8 ml-1" />
-                  </Button>
-                </div>
               </div>
 
               {/* Floating elements */}

@@ -7,6 +7,8 @@ import {
   Zap,
   Shield,
 } from 'lucide-react';
+import Link from 'next/link';
+
 
 const StartTransformation = () => {
   const transformationSteps = [
@@ -97,15 +99,16 @@ const StartTransformation = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button className="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1">
-                Get Started Now
+                <Link href="/contact">Get Started Now</Link>
+
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button
+              {/* <Button
                 variant="outline"
                 className="border-2 border-gray-200 text-gray-700 hover:bg-gray-50 text-lg px-8 py-6 rounded-xl transition-all duration-300"
               >
                 Schedule Consultation
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
@@ -220,15 +223,16 @@ const StartTransformation = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1">
-              Start Your Project
+              <Link href="/contact">Contact Our Team</Link>
+
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button
+            {/* <Button
               variant="outline"
               className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-xs text-lg px-8 py-6 rounded-xl transition-all duration-300"
             >
               Contact Our Team
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
