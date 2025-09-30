@@ -65,10 +65,9 @@ export const blogPosts: BlogPost[] = [
       'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=2000',
     date: 'May 15, 2025',
     author: {
-      name: 'Alex Morgan',
-      avatar:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150',
-      role: 'Design Director',
+      name: 'Anurag',
+      avatar: '/assets/team/Anurag.jpg',
+      role: 'Founder / Full-Stack Developer',
     },
     category: 'Design',
     tags: ['Web Design', 'Trends', 'UX/UI', 'AI', 'Sustainability'],
@@ -101,16 +100,15 @@ export const blogPosts: BlogPost[] = [
       <h2>Testing and Measuring Success</h2>
       <p>Always test your changes and measure their impact. A/B testing different versions of your pages can reveal what resonates best with your audience and drives the highest conversions.</p>
     `,
-    image:
-      'https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=2000',
+    image: '/assets/team/Anurag.jpg',
     date: 'May 8, 2025',
     author: {
-      name: 'Jessica Chen',
+      name: 'Anurag',
       avatar:
         'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&q=80&w=150',
       role: 'Marketing Specialist',
     },
-    category: 'Marketing',
+    category: 'Founder / Full-Stack Developer',
     tags: ['Conversion', 'Optimization', 'Analytics'],
     readTime: '6 min read',
   },
@@ -141,10 +139,9 @@ export const blogPosts: BlogPost[] = [
       'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=2000',
     date: 'May 1, 2025',
     author: {
-      name: 'Michael Smith',
-      avatar:
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150',
-      role: 'Senior Developer',
+      name: 'Anjali Pundhir',
+      avatar: '/assets/team/Anjii.jpg',
+      role: 'Co-Founder / UI/UX Designer',
     },
     category: 'Development',
     tags: ['Mobile', 'Responsive', 'UX'],
@@ -177,10 +174,9 @@ export const blogPosts: BlogPost[] = [
       'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=2000',
     date: 'April 24, 2025',
     author: {
-      name: 'Sarah Johnson',
-      avatar:
-        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150',
-      role: 'SEO Specialist',
+      name: 'Anjali Pundhir',
+      avatar: '/assets/team/Anjii.jpg',
+      role: 'Co-Founder / UI/UX Designer',
     },
     category: 'SEO',
     tags: ['Search', 'Organic Traffic', 'Keywords'],

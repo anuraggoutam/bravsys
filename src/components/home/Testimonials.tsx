@@ -8,8 +8,6 @@ interface Testimonial {
   id: number;
   quote: string;
   name: string;
-  title: string;
-  company: string;
   image: string;
 }
 
@@ -18,18 +16,14 @@ const testimonials: Testimonial[] = [
     id: 1,
     quote:
       'Bravsys transformed our digital infrastructure with their AI-powered solutions. The results exceeded our expectations, delivering 40% improvement in operational efficiency.',
-    name: 'Sarah Johnson',
-    title: 'CTO',
-    company: 'TechCorp Industries',
+    name: 'Ishita Yadav',
     image: '/assets/user.webp',
   },
   {
     id: 2,
     quote:
       'Their consultative approach and deep industry expertise helped us navigate complex digital transformation challenges. Outstanding results delivered on time.',
-    name: 'Michael Chen',
-    title: 'VP of Digital Strategy',
-    company: 'Global Finance Corp',
+    name: 'Rohit jha',
     image: '/assets/user.webp',
   },
   {
@@ -37,8 +31,7 @@ const testimonials: Testimonial[] = [
     quote:
       'The web applications developed by Bravsys have revolutionized our business operations. We now have faster, more efficient digital processes.',
     name: 'Amanda Rodriguez',
-    title: 'Head of Analytics',
-    company: 'Innovation Labs',
+   
     image: '/assets/user.webp',
   },
 ];
@@ -98,10 +91,7 @@ const Testimonials = () => {
                       <h4 className="text-xl font-bold mb-1 text-gray-900">
                         {testimonials[activeIndex].name}
                       </h4>
-                      <p className="text-gray-600">
-                        {testimonials[activeIndex].title},{' '}
-                        {testimonials[activeIndex].company}
-                      </p>
+                      
                     </div>
                   </div>
                 </CardContent>
