@@ -86,7 +86,9 @@ const Contact = () => {
                 <Phone size={24} />
               </div>
               <h3 className="text-lg font-bold mb-2">Call Us</h3>
-              <p className="text-gray-600 mb-4">Monday to Saturday 10am to 6pm</p>
+              <p className="text-gray-600 mb-4">
+                Monday to Saturday 10am to 6pm
+              </p>
               <a
                 href="tel:+15551234567"
                 className="text-brand-purple font-medium"
@@ -201,7 +203,7 @@ const Contact = () => {
               {/* Map placeholder - in a real application, replace with actual Google Maps embed */}
               <div className="w-full h-64 bg-gray-200 rounded-lg mb-8 overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.7457789493283!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1621535345288!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7004.273659418025!2d77.30148996623866!3d28.62566091933082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1shi!2sin!4v1759386359325!5m2!1shi!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
