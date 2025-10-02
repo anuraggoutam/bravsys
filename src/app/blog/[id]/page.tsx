@@ -284,7 +284,7 @@ const BlogPost = () => {
                     </div>
                   </div>
 
-                  {/* Newsletter Signup */}
+                  Newsletter Signup
                   <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100">
                     <h3 className="text-lg font-bold text-gray-900 mb-3">
                       Get more insights
