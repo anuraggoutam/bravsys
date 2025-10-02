@@ -47,8 +47,8 @@ const Header = () => {
             <Image
               src="/assets/bravsys-logo.png"
               alt="BRAVSYS Logo"
-              width={120}
-              height={32}
+              width={124}
+              height={30}
               className="h-8 md:h-10"
             />
           </Link>
