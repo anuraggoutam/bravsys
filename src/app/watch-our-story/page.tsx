@@ -278,7 +278,7 @@ const milestones = [
               variant="outline"
               className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6 rounded-xl"
             >
-              Contact Us Today
+              <Link href="/contact">Contact Us Today</Link>
             </Button>
           </div>
         </div>

@@ -100,12 +100,11 @@ export const blogPosts: BlogPost[] = [
       <h2>Testing and Measuring Success</h2>
       <p>Always test your changes and measure their impact. A/B testing different versions of your pages can reveal what resonates best with your audience and drives the highest conversions.</p>
     `,
-    image: '/assets/team/Anurag.jpg',
+    image: 'https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg',
     date: 'May 8, 2025',
     author: {
       name: 'Anurag',
-      avatar:
-        'https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&q=80&w=150',
+      avatar: '/assets/team/Anurag.jpg',
       role: 'Marketing Specialist',
     },
     category: 'Founder / Full-Stack Developer',

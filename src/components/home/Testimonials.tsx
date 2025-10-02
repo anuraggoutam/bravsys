@@ -30,7 +30,7 @@ const testimonials: Testimonial[] = [
     id: 3,
     quote:
       'The web applications developed by Bravsys have revolutionized our business operations. We now have faster, more efficient digital processes.',
-    name: 'Amanda Rodriguez',
+    name: 'Anamika Singh',
    
     image: '/assets/user.webp',
   },

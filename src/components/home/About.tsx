@@ -7,6 +7,7 @@ import {
   useStaggeredAnimation,
 } from '@/hooks/useScrollAnimation';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const About = () => {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation();
@@ -214,7 +215,7 @@ const About = () => {
             transformation goals.
           </p>
           <Button className="bg-white text-blue-600 hover:bg-gray-100 px-10 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-            Contact Us Today
+            <Link href="/contact">Contact Us Today</Link>
           </Button>
         </div>
       </div>
