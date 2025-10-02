@@ -214,7 +214,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
       </div>
 
       {/* Enhanced Newsletter */}
-      <div className="relative overflow-hidden rounded-2xl">
+      {/* <div className="relative overflow-hidden rounded-2xl">
         <div className="absolute inset-0 bg-linear-to-br from-blue-600 via-purple-600 to-pink-600"></div>
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative p-8 text-white">
@@ -262,7 +262,7 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
             </div>
           )}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
