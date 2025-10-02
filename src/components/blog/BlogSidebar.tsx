@@ -205,12 +205,12 @@ const BlogSidebar: React.FC<BlogSidebarProps> = ({
             </div>
           ))}
         </div>
-        <Link
+        {/* <Link
           href="/blog"
           className="mt-4 block text-center text-blue-600 font-medium hover:text-blue-700 transition-colors"
         >
           View All Posts →
-        </Link>
+        </Link> */}
       </div>
 
       {/* Enhanced Newsletter */}
