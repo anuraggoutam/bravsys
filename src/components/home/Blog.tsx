@@ -20,15 +20,15 @@ const Blog = () => {
     <section className="py-20 bg-linear-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <TrendingUp size={16} className="mr-2" />
+          <div className="inline-flex items-center bg-blue-50 text-blue-600 px-5 py-2.5 rounded-full text-base font-semibold mb-5">
+            <TrendingUp size={20} className="mr-2" />
             Latest Insights
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5">
             Expert Insights & Industry{' '}
             <span className="gradient-text">Analysis</span>
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-lg md:text-2xl text-gray-600 font-light">
             Stay ahead of the curve with our latest articles, industry insights,
             and expert analysis on technology and digital transformation.
           </p>
@@ -37,9 +37,9 @@ const Blog = () => {
         {/* Featured Article */}
         {featuredPost && (
           <div className="mb-16">
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                <div className="relative h-64 lg:h-auto">
+                <div className="relative h-60 md:h-80 lg:h-auto">
                   <Image
                     src={featuredPost.image}
                     alt={featuredPost.title}
@@ -48,15 +48,19 @@ const Blog = () => {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-red-500 text-white">Featured</Badge>
+                    <Badge className="bg-red-600 text-white px-4 py-2 text-base rounded-md shadow-md">
+                      Featured
+                    </Badge>
                   </div>
                 </div>
 
                 <div className="p-8 lg:p-12 flex flex-col justify-center">
                   <div className="flex items-center gap-2 mb-4">
-                    <Badge variant="secondary">{featuredPost.category}</Badge>
+                    <Badge variant="secondary" className="text-sm px-3 py-1">
+                      {featuredPost.category}
+                    </Badge>
                     <span className="text-gray-400">•</span>
-                    <div className="flex items-center text-sm text-gray-500">
+                    <div className="flex items-center text-sm text-gray-400">
                       <Clock size={14} className="mr-1" />
                       {featuredPost.readTime}
                     </div>
@@ -64,12 +68,12 @@ const Blog = () => {
 
                   <Link
                     href={`/blog/${featuredPost.id}`}
-                    className="text-2xl lg:text-3xl font-bold text-gray-900 hover:text-blue-600 transition-colors mb-4 leading-tight"
+                    className="text-2xl md:text-4xl font-black text-gray-900 hover:text-blue-600 transition-colors mb-5 leading-tight"
                   >
                     {featuredPost.title}
                   </Link>
 
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-700 mb-8 md:text-lg leading-relaxed font-medium">
                     {featuredPost.excerpt}
                   </p>
 
@@ -83,16 +87,16 @@ const Blog = () => {
                         className="w-10 h-10 rounded-full mr-3"
                       />
                       <div>
-                        <div className="font-medium text-gray-900">
+                        <div className="font-semibold text-gray-900 text-base md:text-lg">
                           {featuredPost.author.name}
                         </div>
-                        <div className="text-sm text-gray-500">
+                        <div className="text-xs md:text-sm text-gray-400">
                           {featuredPost.author.role}
                         </div>
                       </div>
                     </div>
 
-                    <div className="flex items-center text-sm text-gray-500">
+                    <div className="flex items-center text-xs md:text-sm text-gray-400">
                       <Calendar size={14} className="mr-1" />
                       {featuredPost.date}
                     </div>
@@ -104,13 +108,13 @@ const Blog = () => {
         )}
 
         {/* Regular Articles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {regularPosts.map((post) => (
             <Card
               key={post.id}
-              className="group overflow-hidden hover:shadow-xl transition-all duration-300 border-0 shadow-lg"
+              className="group overflow-hidden hover:shadow-2xl transition-all duration-300 border-0 shadow-lg rounded-2xl bg-white"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 md:h-56 overflow-hidden">
                 <Image
                   src={post.image}
                   alt={post.title}
@@ -119,61 +123,56 @@ const Blog = () => {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="absolute top-4 left-4">
-                  <Badge className="bg-white/90 text-gray-700 backdrop-blur-xs">
+                  <Badge className="bg-white/95 text-gray-800 shadow text-xs font-bold px-2.5 py-1 rounded border border-blue-200">
                     {post.category}
                   </Badge>
                 </div>
               </div>
 
-              <CardHeader className="pb-3">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Clock size={14} className="mr-1" />
-                    {post.readTime}
-                  </div>
-                  <span className="text-gray-300">•</span>
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Calendar size={14} className="mr-1" />
-                    {post.date}
-                  </div>
+              <CardHeader className="pb-2">
+                <div className="flex items-center text-xs md:text-sm text-gray-400 font-normal">
+                  <Clock size={14} className="mr-1" />
+                  {post.readTime}
                 </div>
-
-                <Link
-                  href={`/blog/${post.id}`}
-                  className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors leading-tight group-hover:text-blue-600"
-                >
-                  {post.title}
-                </Link>
+                <span className="text-gray-300">•</span>
+                <div className="flex items-center text-xs md:text-sm text-gray-400 font-normal">
+                  <Calendar size={14} className="mr-1" />
+                  {post.date}
+                </div>
               </CardHeader>
 
               <CardContent className="pb-4">
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-700 mb-4 leading-relaxed text-sm md:text-base font-medium">
                   {post.excerpt}
                 </p>
 
                 <div className="flex flex-wrap gap-2">
                   {post.tags.slice(0, 2).map((tag) => (
-                    <Badge key={tag} variant="outline" className="text-xs">
+                    <Badge
+                      key={tag}
+                      variant="outline"
+                      className="text-xs px-2 py-0.5"
+                    >
                       {tag}
                     </Badge>
                   ))}
                 </div>
               </CardContent>
 
-              <CardFooter className="pt-0 flex justify-between items-center">
+              <CardFooter className="pt-0 flex justify-between items-center mt-2">
                 <div className="flex items-center">
                   <Image
                     src={post.author.avatar}
                     alt={post.author.name}
                     width={32}
                     height={32}
-                    className="w-8 h-8 rounded-full mr-2"
+                    className="w-8 h-8 rounded-full mr-2 border border-gray-200"
                   />
                   <div>
-                    <div className="text-sm font-medium text-gray-900">
+                    <div className="text-xs md:text-sm font-semibold text-gray-900">
                       {post.author.name}
                     </div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-gray-400">
                       {post.author.role}
                     </div>
                   </div>
@@ -181,7 +180,7 @@ const Blog = () => {
 
                 <Link
                   href={`/blog/${post.id}`}
-                  className="text-blue-600 font-medium inline-flex items-center hover:text-blue-700 transition-colors group/link"
+                  className="text-blue-600 font-semibold inline-flex items-center hover:text-blue-700 transition-colors group/link"
                 >
                   Read More
                   <ArrowRight
@@ -221,7 +220,7 @@ const Blog = () => {
           <Button
             asChild
             size="lg"
-            className="gradient-bg hover:opacity-90 transition-opacity px-8 py-4 text-lg"
+            className="gradient-bg hover:opacity-90 transition-opacity px-8 py-4 text-lg font-bold rounded-xl shadow-md"
           >
             <Link href="/blog">
               Explore All Articles

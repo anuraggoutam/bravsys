@@ -14,7 +14,7 @@ const DEFAULT_URL = 'https://bravsys.com';
 // Add social media information
 const SOCIAL_MEDIA = {
   twitter: 'https://x.com/bravsys_',
-  instagram: 'https://www.instagram.com/bravsys_/',
+  instagram: 'https://www.instagram.com/bravsys/',
   facebook: 'https://www.facebook.com/profile.php?id=61572442240215',
   linkedin: 'www.linkedin.com/in/anurag-gautam-52b899218',
 };
@@ -88,7 +88,7 @@ const DEFAULT_METADATA: Metadata = {
         url: '/images/banner.webp',
         width: 1200,
         height: 630,
-        alt: 'Vertex Web Solutions - Web Development Agency',
+        alt: 'Bravsys Solutions - Web Development Agency',
       },
     ],
   },

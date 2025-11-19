@@ -40,23 +40,25 @@ const Footer = () => {
               >
                 <Facebook size={20} />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Twitter size={20} />
-              </a>
+              </a> */}
               <a
-                href="#"
+                href="https://www.instagram.com/bravsys?igsh=d2hqOWRzNHlxb2dq"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Instagram size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/anurag-gautam-52b899218/"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <Linkedin size={20} />
+                
+                  <Linkedin size={20} />
+                
               </a>
             </div>
           </div>

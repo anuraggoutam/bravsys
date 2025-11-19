@@ -25,6 +25,7 @@ import { useBlog } from '@/hooks/useBlog';
 import { blogPosts } from '@/data/blogData';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Metadata } from 'next';
 
 const Blog = () => {
   const { filterState, paginatedPosts, totalPages, updateFilter } = useBlog(6);
