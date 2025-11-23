@@ -28,7 +28,10 @@ export default function RootLayout({
       <head>
         <StructuredData />
       </head>
-      <body className={`${poppins.variable} font-poppins antialiased`}>
+      <body
+        className={`${poppins.variable} font-poppins antialiased`}
+        suppressHydrationWarning={true}
+      >
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="grow">{children}</main>

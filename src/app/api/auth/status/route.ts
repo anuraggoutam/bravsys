@@ -8,7 +8,8 @@ const secret = new TextEncoder().encode(
 );
 
 export async function GET(req: NextRequest) {
-  const token = cookies().get('auth-token')?.value;
+  const cookieStore = await cookies();
+  const token = cookieStore.get('auth-token')?.value;
 
   if (!token) {
     return NextResponse.json({ authenticated: false }, { status: 200 });
