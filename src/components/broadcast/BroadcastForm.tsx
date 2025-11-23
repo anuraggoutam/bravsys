@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import * as XLSX from 'xlsx';
 
 interface Recipient {
@@ -105,51 +106,60 @@ export function BroadcastForm() {
   };
 
   return (
-    <form onSubmit={handleBroadcast}>
-      <div className="grid gap-4">
-        <div className="grid gap-2">
-          <Label htmlFor="subject">Email Subject</Label>
-          <Input
-            id="subject"
-            type="text"
-            placeholder="Announcing our new feature!"
-            required
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-          />
-        </div>
-        <div className="grid gap-2">
-          <Label htmlFor="body">Email Body</Label>
-          <Textarea
-            id="body"
-            placeholder="Hello {{companyName}}, we are excited to announce..."
-            required
-            value={body}
-            onChange={(e) => setBody(e.target.value)}
-            rows={10}
-          />
-          <p className="text-sm text-muted-foreground">
-            Use <code>{'{{companyName}}'}</code> as a placeholder for the company name.
-          </p>
-        </div>
-        <div className="grid gap-2">
-          <Label htmlFor="recipients-file">Recipients</Label>
-          <Input
-            id="recipients-file"
-            type="file"
-            accept=".xlsx, .xls"
-            onChange={handleFileChange}
-            required
-          />
-           {fileName && <p className="text-sm text-muted-foreground">{fileName} ({recipients.length} recipients)</p>}
-          <p className="text-sm text-muted-foreground">
-            Upload an Excel file with two columns: 'Company Email' and 'Company Name'. The header is required.
-          </p>
-        </div>
-        <Button type="submit" disabled={isLoading}>
-          {isLoading ? 'Sending...' : 'Send Broadcast'}
-        </Button>
-      </div>
-    </form>
+    <Card className="w-full max-w-2xl mx-auto">
+      <CardHeader>
+        <CardTitle>Create New Broadcast</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <form onSubmit={handleBroadcast} className="space-y-6">
+          <div className="grid gap-2">
+            <Label htmlFor="subject">Email Subject</Label>
+            <Input
+              id="subject"
+              type="text"
+              placeholder="Announcing our new feature!"
+              required
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+            />
+          </div>
+          <div className="grid gap-2">
+            <Label htmlFor="body">Email Body</Label>
+            <Textarea
+              id="body"
+              placeholder="Hello {{companyName}}, we are excited to announce..."
+              required
+              value={body}
+              onChange={(e) => setBody(e.target.value)}
+              rows={10}
+            />
+            <p className="text-sm text-muted-foreground">
+              Use <code>{'{{companyName}}'}</code> as a placeholder for the company name.
+            </p>
+          </div>
+          <div className="grid gap-2">
+            <Label htmlFor="recipients-file">Recipients</Label>
+            <Input
+              id="recipients-file"
+              type="file"
+              accept=".xlsx, .xls"
+              onChange={handleFileChange}
+              required
+            />
+            {fileName && (
+              <p className="text-sm text-muted-foreground mt-2">
+                {fileName} ({recipients.length} recipients loaded)
+              </p>
+            )}
+            <p className="text-sm text-muted-foreground">
+              Upload an Excel file with two columns: 'Company Email' and 'Company Name'. The header is required.
+            </p>
+          </div>
+          <Button type="submit" disabled={isLoading} className="w-full">
+            {isLoading ? 'Sending Broadcast...' : 'Send Broadcast'}
+          </Button>
+        </form>
+      </CardContent>
+    </Card>
   );
 }
