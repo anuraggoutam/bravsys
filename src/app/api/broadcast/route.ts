@@ -8,7 +8,8 @@ const secret = new TextEncoder().encode(
 );
 
 async function verifyAuth(req: NextRequest) {
-    const token = cookies().get('auth-token')?.value;
+    const cookieStore = await cookies();
+    const token = cookieStore.get('auth-token')?.value;
 
     if (!token) {
         return false;
@@ -33,6 +34,9 @@ async function sendEmails(subject: string, body: string, recipients: { email: st
         },
     });
 
+    let successfulSends = 0;
+    let failedSends = 0;
+
     for (const recipient of recipients) {
         const personalizedBody = body.replace(/{{companyName}}/g, recipient.companyName || '');
 
@@ -44,10 +48,13 @@ async function sendEmails(subject: string, body: string, recipients: { email: st
                 html: personalizedBody,
             });
             console.log(`Email sent to ${recipient.email}`);
+            successfulSends++;
         } catch (error) {
             console.error(`Failed to send email to ${recipient.email}:`, error);
+            failedSends++;
         }
     }
+    return { successfulSends, failedSends };
 }
 
 export async function POST(req: NextRequest) {
@@ -63,10 +70,13 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ message: 'Missing required fields' }, { status: 400 });
     }
 
-    // Fire and forget
-    sendEmails(subject, body, recipients);
+    // Await the result of sendEmails
+    const { successfulSends, failedSends } = await sendEmails(subject, body, recipients);
 
-    return NextResponse.json({ message: 'Broadcast initiated' });
+    return NextResponse.json({ 
+        message: 'Broadcast initiated', 
+        summary: { successfulSends, failedSends } 
+    });
   } catch (error) {
     console.error('Broadcast error:', error);
     return NextResponse.json({ message: 'Internal server error' }, { status: 500 });

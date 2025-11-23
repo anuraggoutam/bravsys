@@ -87,7 +87,11 @@ export function BroadcastForm() {
       const result = await res.json();
 
       if (res.ok) {
-        toast.success('Email broadcast started successfully.');
+        const { summary } = result;
+        toast.success(`Broadcast initiated: ${summary.successfulSends} emails sent, ${summary.failedSends} failed.`);
+        if (summary.failedSends > 0) {
+          toast.error(`${summary.failedSends} emails failed to send. Check console for details.`);
+        }
         setSubject('');
         setBody('');
         setRecipients([]);
